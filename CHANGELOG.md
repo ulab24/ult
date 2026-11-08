@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.4] - 2026-11-09
+
+Editors such as nvim no longer overlap the status bar.
+
+### Fixed
+
+- Editors (nvim, vim) no longer draw under the status bar. A terminal that reports its size in-band (mode 2048) or answers the text-area size query told the program the full height; ult now answers for the reduced size instead.
+
 ## [0.1.3] - 2026-11-09
 
 The leader key is now `^B`, so detaching works on a Mac out of the box. Sessions can be grouped into workspaces that show as tabs.

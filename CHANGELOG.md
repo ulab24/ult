@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.6] - 2026-11-09
+
+Leaving the scrollback viewer takes you back into the session.
+
+### Fixed
+
+- After the mouse wheel (or `^B [`) opened the scrollback viewer from an attached session, `Esc` left you in the session list and the session had to be reopened. It now goes back into the session.
+
 ## [0.1.5] - 2026-11-09
 
 The mouse wheel works while attached, the session list shows the active workspace, and leaving ult leaves the terminal clean. `ult service restart` now picks up a new binary.

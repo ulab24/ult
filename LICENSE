@@ -1,0 +1,19 @@
+Copyright (c) 2026 ulab24. All rights reserved.
+
+ult is provided free of charge in binary form. You may download, install and
+run it for your own use, including on machines you control and for your own
+work or business.
+
+You may not copy, modify, merge, publish, distribute, sublicense, sell or
+reverse engineer ult or any part of it, or provide it to others as a service,
+without prior written permission from ulab24.
+
+ult includes third-party components under their own licences (for example
+github.com/creack/pty, MIT, and golang.org/x/*, BSD-3-Clause); those licences
+apply to those components.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL ULAB24
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF
+THE SOFTWARE.

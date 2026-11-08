@@ -2,10 +2,61 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-08T20:34:10Z",
-  "latest": "v0.1.5",
+  "generated": "2026-11-08T20:53:24Z",
+  "latest": "v0.1.6",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.6",
+      "tag": "v0.1.6",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "Leaving the scrollback viewer takes you back into the session.",
+      "sections": [
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "After the mouse wheel (or `^B [`) opened the scrollback viewer from an attached session, `Esc` left you in the session list and the session had to be reopened. It now goes back into the session."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.6",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.5...v0.1.6",
+      "assets": [
+        {
+          "name": "ult-v0.1.6-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-linux-arm64.tar.gz",
+          "sha256": "0f95bb5d706378210a0254407a6dfeadf22137ff49068bdcbe448db1c698b8db"
+        },
+        {
+          "name": "ult-v0.1.6-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-linux-x64.tar.gz",
+          "sha256": "3a52ac4a37efaa83a6deac945ee7dc4b82527ff6a2df1c1e88c80324a74f9ad8"
+        },
+        {
+          "name": "ult-v0.1.6-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-macos-arm64.tar.gz",
+          "sha256": "113e8c882ae698f59798f0d3d001b1da844a0b6ef45d6f9763a08998f4f94879"
+        },
+        {
+          "name": "ult-v0.1.6-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-macos-x64.tar.gz",
+          "sha256": "14867f6fd67450bb3cff1789f1813f64883c53b55848f12f535da92f13be5d1f"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.6/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.6/checksums.txt.asc",
+      "notes_md": "Leaving the scrollback viewer takes you back into the session.\n\n### Fixed\n\n- After the mouse wheel (or `^B [`) opened the scrollback viewer from an attached session, `Esc` left you in the session list and the session had to be reopened. It now goes back into the session.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.6\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.6-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-linux-arm64.tar.gz) | `0f95bb5d70637821…` |\n| Linux x64 | [`ult-v0.1.6-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-linux-x64.tar.gz) | `3a52ac4a37efaa83…` |\n| macOS arm64 | [`ult-v0.1.6-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-macos-arm64.tar.gz) | `113e8c882ae698f5…` |\n| macOS x64 | [`ult-v0.1.6-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.6/ult-v0.1.6-macos-x64.tar.gz) | `14867f6fd67450bb…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.5...v0.1.6\n"
+    },
     {
       "version": "0.1.5",
       "tag": "v0.1.5",

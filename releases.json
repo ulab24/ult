@@ -2,10 +2,64 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-08T20:53:24Z",
-  "latest": "v0.1.6",
+  "generated": "2026-11-08T21:16:49Z",
+  "latest": "v0.1.7",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.7",
+      "tag": "v0.1.7",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "The TUI shows one workspace at a time, and every session is in one.",
+      "sections": [
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "Workspaces are mandatory. A session that names none is in `default`, which always exists; `ult ls --json` and the protocol always carry a `workspace`. `ult workspace \u003csession\u003e -` now means \"back to default\". Sessions from before this release are in `default`.",
+            "The session list shows only the active workspace, named in the title bar: `ult ┃ api ┃ 3 sessions`. The app always starts in `default`. `w` is the workspace switcher: `enter` switches, `n` makes one (empty ones stay listed while you are in them), `a` moves a session in from another workspace, `d` sends one to `default`, `D` (twice) dissolves a workspace into `default`, `r` renames it.",
+            "A new session starts in the workspace being shown. The tabs while attached follow the same rule, so `default` has tabs too.",
+            "A session that is blocked in a workspace you are not looking at is flagged in the title bar (`◆ 1 in api`), and the next-session key switches to it."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.7",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.6...v0.1.7",
+      "assets": [
+        {
+          "name": "ult-v0.1.7-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-linux-arm64.tar.gz",
+          "sha256": "6f0598ccd0fed842a592f5295c75906fa75b310c70747fded4f36e54bb90bb85"
+        },
+        {
+          "name": "ult-v0.1.7-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-linux-x64.tar.gz",
+          "sha256": "2af6f0dff4fbfcc99cc50271796787780f290525253d78c9205a7e54270853d4"
+        },
+        {
+          "name": "ult-v0.1.7-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-macos-arm64.tar.gz",
+          "sha256": "4f1e48b31d6ee9cb02978c6661ba19db9d9e33c2f5468bee37e7b6efbf466cd6"
+        },
+        {
+          "name": "ult-v0.1.7-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-macos-x64.tar.gz",
+          "sha256": "c4d90e08dd40f1e6af3369f69384993c1fb7817df13cfd0d7958a4fcb48523bd"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.7/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.7/checksums.txt.asc",
+      "notes_md": "The TUI shows one workspace at a time, and every session is in one.\n\n### Changed\n\n- Workspaces are mandatory. A session that names none is in `default`, which always exists; `ult ls --json` and the protocol always carry a `workspace`. `ult workspace \u003csession\u003e -` now means \"back to default\". Sessions from before this release are in `default`.\n- The session list shows only the active workspace, named in the title bar: `ult ┃ api ┃ 3 sessions`. The app always starts in `default`. `w` is the workspace switcher: `enter` switches, `n` makes one (empty ones stay listed while you are in them), `a` moves a session in from another workspace, `d` sends one to `default`, `D` (twice) dissolves a workspace into `default`, `r` renames it.\n- A new session starts in the workspace being shown. The tabs while attached follow the same rule, so `default` has tabs too.\n- A session that is blocked in a workspace you are not looking at is flagged in the title bar (`◆ 1 in api`), and the next-session key switches to it.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.7\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.7-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-linux-arm64.tar.gz) | `6f0598ccd0fed842…` |\n| Linux x64 | [`ult-v0.1.7-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-linux-x64.tar.gz) | `2af6f0dff4fbfcc9…` |\n| macOS arm64 | [`ult-v0.1.7-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-macos-arm64.tar.gz) | `4f1e48b31d6ee9cb…` |\n| macOS x64 | [`ult-v0.1.7-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.7/ult-v0.1.7-macos-x64.tar.gz) | `c4d90e08dd40f1e6…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.6...v0.1.7\n"
+    },
     {
       "version": "0.1.6",
       "tag": "v0.1.6",

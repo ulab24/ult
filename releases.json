@@ -2,10 +2,61 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-08T19:50:38Z",
-  "latest": "v0.1.3",
+  "generated": "2026-11-08T20:09:42Z",
+  "latest": "v0.1.4",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.4",
+      "tag": "v0.1.4",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "Editors such as nvim no longer overlap the status bar.",
+      "sections": [
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "Editors (nvim, vim) no longer draw under the status bar. A terminal that reports its size in-band (mode 2048) or answers the text-area size query told the program the full height; ult now answers for the reduced size instead."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.4",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.3...v0.1.4",
+      "assets": [
+        {
+          "name": "ult-v0.1.4-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-linux-arm64.tar.gz",
+          "sha256": "c46813da94dc6bf7f17cc0f09360a4aad0a8c9d667d158aeae1d81c9d3a68f0a"
+        },
+        {
+          "name": "ult-v0.1.4-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-linux-x64.tar.gz",
+          "sha256": "954f48104d51b39a6355eb72690c67f3827cda72c4dc00ac7c9458dae8acbcdb"
+        },
+        {
+          "name": "ult-v0.1.4-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-macos-arm64.tar.gz",
+          "sha256": "351a7c9dd63722deff5ff09ae31669dbe597a818b3637e183573191cb36328e6"
+        },
+        {
+          "name": "ult-v0.1.4-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-macos-x64.tar.gz",
+          "sha256": "86d02a7620ae7c7bbc99f3c977155fc27c0ecce01db7521c741a5a1cf075c4ca"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.4/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.4/checksums.txt.asc",
+      "notes_md": "Editors such as nvim no longer overlap the status bar.\n\n### Fixed\n\n- Editors (nvim, vim) no longer draw under the status bar. A terminal that reports its size in-band (mode 2048) or answers the text-area size query told the program the full height; ult now answers for the reduced size instead.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.4\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.4-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-linux-arm64.tar.gz) | `c46813da94dc6bf7…` |\n| Linux x64 | [`ult-v0.1.4-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-linux-x64.tar.gz) | `954f48104d51b39a…` |\n| macOS arm64 | [`ult-v0.1.4-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-macos-arm64.tar.gz) | `351a7c9dd63722de…` |\n| macOS x64 | [`ult-v0.1.4-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.4/ult-v0.1.4-macos-x64.tar.gz) | `86d02a7620ae7c7b…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.3...v0.1.4\n"
+    },
     {
       "version": "0.1.3",
       "tag": "v0.1.3",

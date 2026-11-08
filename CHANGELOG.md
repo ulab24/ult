@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.5] - 2026-11-09
+
+The mouse wheel works while attached, the session list shows the active workspace, and leaving ult leaves the terminal clean. `ult service restart` now picks up a new binary.
+
+### Added
+
+- The session list's title bar shows the workspace of the selected session after `ult`, like `ult ┃ au ┃ 2 sessions`.
+- The mouse wheel works while attached in the TUI. It used to reach the shell as arrow keys (`^[[A`). Now the wheel opens the scrollback viewer, unless the program uses the mouse itself (nvim, `claude`), which then gets it. The terminal keeps plain clicks while attached: hold Shift (Option on macOS) to select text, or set `mouse = off` to leave the wheel to the terminal.
+
+### Fixed
+
+- `ult service restart` ran whatever binary the service file named, so after an upgrade `ult doctor` kept reporting the old daemon build. It now rewrites the service file when it points at a different ult, then starts that one.
+- Leaving ult no longer leaves pieces of the TUI in your shell. A program that left its alternate screen while attached (a replayed editor, `claude`) dropped the terminal onto the main screen, and the TUI drew there. In the TUI the program's alternate-screen switches are now emulated, so the terminal never leaves it; `ult attach` takes a program that is still in its alternate screen out of it on detach. Detaching also turns off mouse reporting, bracketed paste and the other modes the program set, as tmux does.
+
 ## [0.1.4] - 2026-11-09
 
 Editors such as nvim no longer overlap the status bar.

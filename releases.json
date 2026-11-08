@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "product": "ult",
+  "repo": "ulab24/ult",
+  "generated": "2026-11-08T19:12:53Z",
+  "latest": "v0.1.2",
+  "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
+  "releases": [
+    {
+      "version": "0.1.2",
+      "tag": "v0.1.2",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "Pick a folder instead of typing it: the new-session dialog gets a folder browser that also works for remote machines. Release notes are now structured, and each release publishes a feed for the website.",
+      "sections": [
+        {
+          "name": "Security",
+          "key": "security",
+          "items": [
+            "`dirs` returns folder names only, never files. It accepts absolute or `~` paths, caps a listing at 1000 entries, and is refused for agent session tokens."
+          ]
+        },
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "Folder browser in the new-session dialog. Press `^O` on the Directory field to choose from the directories your sessions already use, or browse the machine's folders: `enter` opens a folder, `backspace` goes up, `space` uses the folder you are in, `.` shows hidden folders, `~` goes home. It works for remote machines too; they need ult v0.1.2 as well.",
+            "A `dirs` request in the daemon protocol (`docs/PROTOCOL.md`), also forwarded by `ult bridge` for the GUI.",
+            "Release notes list what changed by section, with install instructions, a download table, the signing key fingerprint and a full-changelog link.",
+            "Each stable release publishes `releases.json` (and `CHANGELOG.md`) to the public repository, so the ulab24.com site can show every release's notes."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.2",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.1...v0.1.2",
+      "assets": [
+        {
+          "name": "ult-v0.1.2-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-linux-arm64.tar.gz",
+          "sha256": "b1140c35234db79edaa48b8576ed6f23fc5bc938111238d43a6dcd676e7e5b4b"
+        },
+        {
+          "name": "ult-v0.1.2-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-linux-x64.tar.gz",
+          "sha256": "55f86ec011e5e6844597f78d13f9f429c0d13c6e2933ec022ff5177d4afd6d97"
+        },
+        {
+          "name": "ult-v0.1.2-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-macos-arm64.tar.gz",
+          "sha256": "86812d8d76309ed8a3d8691e229490b41e2734eacfb65af53687cf64590d1d81"
+        },
+        {
+          "name": "ult-v0.1.2-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-macos-x64.tar.gz",
+          "sha256": "382a272d8728b03157aaddeefbfa960fddfa2434d1fd47653a81c6627cbc67a4"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.2/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.2/checksums.txt.asc",
+      "notes_md": "Pick a folder instead of typing it: the new-session dialog gets a folder browser that also works for remote machines. Release notes are now structured, and each release publishes a feed for the website.\n\n### Security\n\n- `dirs` returns folder names only, never files. It accepts absolute or `~` paths, caps a listing at 1000 entries, and is refused for agent session tokens.\n\n### Added\n\n- Folder browser in the new-session dialog. Press `^O` on the Directory field to choose from the directories your sessions already use, or browse the machine's folders: `enter` opens a folder, `backspace` goes up, `space` uses the folder you are in, `.` shows hidden folders, `~` goes home. It works for remote machines too; they need ult v0.1.2 as well.\n- A `dirs` request in the daemon protocol (`docs/PROTOCOL.md`), also forwarded by `ult bridge` for the GUI.\n- Release notes list what changed by section, with install instructions, a download table, the signing key fingerprint and a full-changelog link.\n- Each stable release publishes `releases.json` (and `CHANGELOG.md`) to the public repository, so the ulab24.com site can show every release's notes.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.2\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.2-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-linux-arm64.tar.gz) | `b1140c35234db79e…` |\n| Linux x64 | [`ult-v0.1.2-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-linux-x64.tar.gz) | `55f86ec011e5e684…` |\n| macOS arm64 | [`ult-v0.1.2-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-macos-arm64.tar.gz) | `86812d8d76309ed8…` |\n| macOS x64 | [`ult-v0.1.2-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.2/ult-v0.1.2-macos-x64.tar.gz) | `382a272d8728b031…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.1...v0.1.2\n"
+    },
+    {
+      "version": "0.1.1",
+      "tag": "v0.1.1",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "`transparent = on` in the config: the TUI draws no background of its own (base and status bars use the terminal's), so a transparent or blurred terminal shows through."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.1",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.0...v0.1.1",
+      "assets": [],
+      "notes_md": "### Added\n\n- `transparent = on` in the config: the TUI draws no background of its own (base and status bars use the terminal's), so a transparent or blurred terminal shows through.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.1\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.0...v0.1.1\n"
+    },
+    {
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "date": "2026-11-08",
+      "prerelease": false,
+      "summary": "First release. Everything built so far is in this one entry.",
+      "sections": [
+        {
+          "name": "Highlights",
+          "key": "highlights",
+          "items": [
+            "Core: `ult daemon` on a private Unix socket with a single-instance lock; framed protocol with size and depth limits; crash-safe journal (fsynced checksummed records, atomic snapshots, clean-stop marker, scrollback ring with torn-tail repair); sessions on PTYs in their own process group; recovery after `kill -9` or power loss with restart policies `ask`, `auto`, `never`.",
+            "CLI: `new`, `ls`, `attach`, `detach`, `kill`, `resume`, `skip`, `stop`, `version`, `config path|show`, `remote-info`, `mute|unmute`.",
+            "TUI: session list across machines, detail panel, filter, new-session and kill dialogs, help, machines view, recovery view, read-only scrollback viewer with search, attach view with one status row (`^Space d|l|n|[|j`); warm dark and light themes, OSC 11 detection, 16/256/truecolor, `NO_COLOR`; motion with `ULT_MOTION=0` and an ASCII fallback.",
+            "Agents: status (working, blocked, idle, finished) from hooks (Claude Code) or PTY activity; `ult hook`, `ult install-hooks|remove-hooks` (merge, backup, idempotent, `--dry-run`); resume per kind; desktop notifications (notify-send, osascript); `y`/`n` approve when the prompt is recognised.",
+            "Remote machines over the system ssh (`machine NAME = user@host`): merged list, `machine:session` targets, `ult new --machine`, a dropped link never ends a session and recovers by itself.",
+            "Agent-driven sessions: `ult mcp` (eight `ult_*` tools) and `ult spawn|status|read|send|approve|wait|close|revoke|policy`; ownership, depth 3, 8 live children, rate limits, human-attach pause, audit log, enforced in the daemon.",
+            "Hardening: `ult service install|uninstall|status|restart` (systemd user unit, launchd agent), `ult doctor [--json]`, fuzz targets in the gate, soak test with goroutine and fd leak checks, independent review with fixes.",
+            "GUI bridge: `ult bridge` serves all machines to the native GUIs on one private socket (`docs/BRIDGE.md`).",
+            "Release pipeline: `make check` gate, `make build-all` for linux and darwin (amd64, arm64), `install.sh`, workflows `check`, `release` and `scan`.",
+            "Docs: design, plan, user guide, configuration reference, the protocol as built, ADRs, GUI plan."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.0",
+      "assets": [],
+      "notes_md": "First release. Everything built so far is in this one entry.\n\n### Highlights\n\n- Core: `ult daemon` on a private Unix socket with a single-instance lock; framed protocol with size and depth limits; crash-safe journal (fsynced checksummed records, atomic snapshots, clean-stop marker, scrollback ring with torn-tail repair); sessions on PTYs in their own process group; recovery after `kill -9` or power loss with restart policies `ask`, `auto`, `never`.\n- CLI: `new`, `ls`, `attach`, `detach`, `kill`, `resume`, `skip`, `stop`, `version`, `config path|show`, `remote-info`, `mute|unmute`.\n- TUI: session list across machines, detail panel, filter, new-session and kill dialogs, help, machines view, recovery view, read-only scrollback viewer with search, attach view with one status row (`^Space d|l|n|[|j`); warm dark and light themes, OSC 11 detection, 16/256/truecolor, `NO_COLOR`; motion with `ULT_MOTION=0` and an ASCII fallback.\n- Agents: status (working, blocked, idle, finished) from hooks (Claude Code) or PTY activity; `ult hook`, `ult install-hooks|remove-hooks` (merge, backup, idempotent, `--dry-run`); resume per kind; desktop notifications (notify-send, osascript); `y`/`n` approve when the prompt is recognised.\n- Remote machines over the system ssh (`machine NAME = user@host`): merged list, `machine:session` targets, `ult new --machine`, a dropped link never ends a session and recovers by itself.\n- Agent-driven sessions: `ult mcp` (eight `ult_*` tools) and `ult spawn|status|read|send|approve|wait|close|revoke|policy`; ownership, depth 3, 8 live children, rate limits, human-attach pause, audit log, enforced in the daemon.\n- Hardening: `ult service install|uninstall|status|restart` (systemd user unit, launchd agent), `ult doctor [--json]`, fuzz targets in the gate, soak test with goroutine and fd leak checks, independent review with fixes.\n- GUI bridge: `ult bridge` serves all machines to the native GUIs on one private socket (`docs/BRIDGE.md`).\n- Release pipeline: `make check` gate, `make build-all` for linux and darwin (amd64, arm64), `install.sh`, workflows `check`, `release` and `scan`.\n- Docs: design, plan, user guide, configuration reference, the protocol as built, ADRs, GUI plan.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.0\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n"
+    }
+  ]
+}

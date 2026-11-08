@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.7] - 2026-11-09
+
+The TUI shows one workspace at a time, and every session is in one.
+
+### Changed
+
+- Workspaces are mandatory. A session that names none is in `default`, which always exists; `ult ls --json` and the protocol always carry a `workspace`. `ult workspace <session> -` now means "back to default". Sessions from before this release are in `default`.
+- The session list shows only the active workspace, named in the title bar: `ult ┃ api ┃ 3 sessions`. The app always starts in `default`. `w` is the workspace switcher: `enter` switches, `n` makes one (empty ones stay listed while you are in them), `a` moves a session in from another workspace, `d` sends one to `default`, `D` (twice) dissolves a workspace into `default`, `r` renames it.
+- A new session starts in the workspace being shown. The tabs while attached follow the same rule, so `default` has tabs too.
+- A session that is blocked in a workspace you are not looking at is flagged in the title bar (`◆ 1 in api`), and the next-session key switches to it.
+
 ## [0.1.6] - 2026-11-09
 
 Leaving the scrollback viewer takes you back into the session.

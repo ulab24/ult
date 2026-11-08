@@ -2,10 +2,70 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-08T20:09:42Z",
-  "latest": "v0.1.4",
+  "generated": "2026-11-08T20:34:10Z",
+  "latest": "v0.1.5",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.5",
+      "tag": "v0.1.5",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "The mouse wheel works while attached, the session list shows the active workspace, and leaving ult leaves the terminal clean. `ult service restart` now picks up a new binary.",
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "The session list's title bar shows the workspace of the selected session after `ult`, like `ult ┃ au ┃ 2 sessions`.",
+            "The mouse wheel works while attached in the TUI. It used to reach the shell as arrow keys (`^[[A`). Now the wheel opens the scrollback viewer, unless the program uses the mouse itself (nvim, `claude`), which then gets it. The terminal keeps plain clicks while attached: hold Shift (Option on macOS) to select text, or set `mouse = off` to leave the wheel to the terminal."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "`ult service restart` ran whatever binary the service file named, so after an upgrade `ult doctor` kept reporting the old daemon build. It now rewrites the service file when it points at a different ult, then starts that one.",
+            "Leaving ult no longer leaves pieces of the TUI in your shell. A program that left its alternate screen while attached (a replayed editor, `claude`) dropped the terminal onto the main screen, and the TUI drew there. In the TUI the program's alternate-screen switches are now emulated, so the terminal never leaves it; `ult attach` takes a program that is still in its alternate screen out of it on detach. Detaching also turns off mouse reporting, bracketed paste and the other modes the program set, as tmux does."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.5",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.4...v0.1.5",
+      "assets": [
+        {
+          "name": "ult-v0.1.5-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-linux-arm64.tar.gz",
+          "sha256": "53b207177719552e1c7c0627a04505b8ccedbef024286d6d37cb72fa90e0cc42"
+        },
+        {
+          "name": "ult-v0.1.5-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-linux-x64.tar.gz",
+          "sha256": "c8f197bad9a5b3ae2dd34a07f9e75e9c3cb33653a205dd185f1d3fd527f190c2"
+        },
+        {
+          "name": "ult-v0.1.5-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-macos-arm64.tar.gz",
+          "sha256": "420774b8cdfc6075b1aa48cfc8d55494dd16827c39647d392fb667cb31f6c614"
+        },
+        {
+          "name": "ult-v0.1.5-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-macos-x64.tar.gz",
+          "sha256": "b1389e01b4f5191832647f4802dba5ad6152a8ef5fe0897ac522100ff0e4fb70"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.5/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.5/checksums.txt.asc",
+      "notes_md": "The mouse wheel works while attached, the session list shows the active workspace, and leaving ult leaves the terminal clean. `ult service restart` now picks up a new binary.\n\n### Added\n\n- The session list's title bar shows the workspace of the selected session after `ult`, like `ult ┃ au ┃ 2 sessions`.\n- The mouse wheel works while attached in the TUI. It used to reach the shell as arrow keys (`^[[A`). Now the wheel opens the scrollback viewer, unless the program uses the mouse itself (nvim, `claude`), which then gets it. The terminal keeps plain clicks while attached: hold Shift (Option on macOS) to select text, or set `mouse = off` to leave the wheel to the terminal.\n\n### Fixed\n\n- `ult service restart` ran whatever binary the service file named, so after an upgrade `ult doctor` kept reporting the old daemon build. It now rewrites the service file when it points at a different ult, then starts that one.\n- Leaving ult no longer leaves pieces of the TUI in your shell. A program that left its alternate screen while attached (a replayed editor, `claude`) dropped the terminal onto the main screen, and the TUI drew there. In the TUI the program's alternate-screen switches are now emulated, so the terminal never leaves it; `ult attach` takes a program that is still in its alternate screen out of it on detach. Detaching also turns off mouse reporting, bracketed paste and the other modes the program set, as tmux does.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.5\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.5-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-linux-arm64.tar.gz) | `53b207177719552e…` |\n| Linux x64 | [`ult-v0.1.5-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-linux-x64.tar.gz) | `c8f197bad9a5b3ae…` |\n| macOS arm64 | [`ult-v0.1.5-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-macos-arm64.tar.gz) | `420774b8cdfc6075…` |\n| macOS x64 | [`ult-v0.1.5-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.5/ult-v0.1.5-macos-x64.tar.gz) | `b1389e01b4f51918…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.4...v0.1.5\n"
+    },
     {
       "version": "0.1.4",
       "tag": "v0.1.4",

@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.1.3] - 2026-11-09
+
+The leader key is now `^B`, so detaching works on a Mac out of the box. Sessions can be grouped into workspaces that show as tabs.
+
+### Added
+
+- Workspaces: a named group of sessions, local and remote together. `ult new --workspace NAME`, `ult workspace <session> <name|->`, a `workspace` field on every session in `ult ls --json` and the protocol (`docs/PROTOCOL.md`). Sessions started from inside a workspace join it.
+- A workspaces screen (`w` in the list): every workspace with its sessions, machines, state and last activity; create, add sessions, remove, rename, ungroup, attach and kill from it.
+- Tabs: while attached, the status row lists the workspace's running sessions. `^B 1` to `^B 9`, `^B .` and `^B ,` switch between them.
+
+### Changed
+
+- The default leader key is `^B` instead of `^Space`: `^B d` detaches, `^B l` lists, `^B n` makes a new session. macOS uses `^Space` for its input-source shortcut, so detach never reached ult there. Press the leader twice to send `^B` to the program. Keep the old key with `prefix = ctrl-space` in the config; a `prefix` you already set is unchanged.
+
+### Fixed
+
+- `ult attach` ignored the `prefix` setting and always used the default; it now follows the config like the TUI does.
+
 ## [0.1.2] - 2026-11-09
 
 Pick a folder instead of typing it: the new-session dialog gets a folder browser that also works for remote machines. Release notes are now structured, and each release publishes a feed for the website.

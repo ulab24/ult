@@ -2,10 +2,77 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-08T19:12:53Z",
-  "latest": "v0.1.2",
+  "generated": "2026-11-08T19:50:38Z",
+  "latest": "v0.1.3",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.3",
+      "tag": "v0.1.3",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "The leader key is now `^B`, so detaching works on a Mac out of the box. Sessions can be grouped into workspaces that show as tabs.",
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "Workspaces: a named group of sessions, local and remote together. `ult new --workspace NAME`, `ult workspace \u003csession\u003e \u003cname|-\u003e`, a `workspace` field on every session in `ult ls --json` and the protocol (`docs/PROTOCOL.md`). Sessions started from inside a workspace join it.",
+            "A workspaces screen (`w` in the list): every workspace with its sessions, machines, state and last activity; create, add sessions, remove, rename, ungroup, attach and kill from it.",
+            "Tabs: while attached, the status row lists the workspace's running sessions. `^B 1` to `^B 9`, `^B .` and `^B ,` switch between them."
+          ]
+        },
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "The default leader key is `^B` instead of `^Space`: `^B d` detaches, `^B l` lists, `^B n` makes a new session. macOS uses `^Space` for its input-source shortcut, so detach never reached ult there. Press the leader twice to send `^B` to the program. Keep the old key with `prefix = ctrl-space` in the config; a `prefix` you already set is unchanged."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "`ult attach` ignored the `prefix` setting and always used the default; it now follows the config like the TUI does."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.3",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.2...v0.1.3",
+      "assets": [
+        {
+          "name": "ult-v0.1.3-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-linux-arm64.tar.gz",
+          "sha256": "9b8a0b4f9ebabf072bfb2b81d9f25527ac7765d30710034efb4fc33e0492d138"
+        },
+        {
+          "name": "ult-v0.1.3-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-linux-x64.tar.gz",
+          "sha256": "e70ec72c28a80d8fcc5edf3f473457d6871ac8891d271c97efca78cf8519e246"
+        },
+        {
+          "name": "ult-v0.1.3-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-macos-arm64.tar.gz",
+          "sha256": "950d9b94538f85bd566f22b1ae6bbb135c0fcd5de4e29ebad6da193700f83877"
+        },
+        {
+          "name": "ult-v0.1.3-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-macos-x64.tar.gz",
+          "sha256": "b7eca05301af7be185e8170616b202d174204d91f27fd4da8d567cf2d35fb90d"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.3/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.3/checksums.txt.asc",
+      "notes_md": "The leader key is now `^B`, so detaching works on a Mac out of the box. Sessions can be grouped into workspaces that show as tabs.\n\n### Added\n\n- Workspaces: a named group of sessions, local and remote together. `ult new --workspace NAME`, `ult workspace \u003csession\u003e \u003cname|-\u003e`, a `workspace` field on every session in `ult ls --json` and the protocol (`docs/PROTOCOL.md`). Sessions started from inside a workspace join it.\n- A workspaces screen (`w` in the list): every workspace with its sessions, machines, state and last activity; create, add sessions, remove, rename, ungroup, attach and kill from it.\n- Tabs: while attached, the status row lists the workspace's running sessions. `^B 1` to `^B 9`, `^B .` and `^B ,` switch between them.\n\n### Changed\n\n- The default leader key is `^B` instead of `^Space`: `^B d` detaches, `^B l` lists, `^B n` makes a new session. macOS uses `^Space` for its input-source shortcut, so detach never reached ult there. Press the leader twice to send `^B` to the program. Keep the old key with `prefix = ctrl-space` in the config; a `prefix` you already set is unchanged.\n\n### Fixed\n\n- `ult attach` ignored the `prefix` setting and always used the default; it now follows the config like the TUI does.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.3\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.3-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-linux-arm64.tar.gz) | `9b8a0b4f9ebabf07…` |\n| Linux x64 | [`ult-v0.1.3-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-linux-x64.tar.gz) | `e70ec72c28a80d8f…` |\n| macOS arm64 | [`ult-v0.1.3-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-macos-arm64.tar.gz) | `950d9b94538f85bd…` |\n| macOS x64 | [`ult-v0.1.3-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.3/ult-v0.1.3-macos-x64.tar.gz) | `b7eca05301af7be1…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.2...v0.1.3\n"
+    },
     {
       "version": "0.1.2",
       "tag": "v0.1.2",

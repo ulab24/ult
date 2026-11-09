@@ -2,10 +2,72 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-09T21:21:22Z",
-  "latest": "v0.2.2",
+  "generated": "2026-11-09T22:26:49Z",
+  "latest": "v0.2.3",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.2.3",
+      "tag": "v0.2.3",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "summary": "ult now shows how busy every machine is: a dashboard on the main screen, a fleet view and a per-machine detail with processes.",
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "A dashboard replaces the Preview on the main screen: a fleet summary, what needs your attention (blocked and interrupted sessions, offline machines, hot CPU, RAM or disk, then recent events), each machine's CPU history and the busiest processes across machines.",
+            "`f` opens the fleet view, a card per machine with CPU, RAM, disk, network and its top processes. `enter` opens a machine's detail: CPU and RAM graphs (1 minute, 5 minutes, 1 hour), disks, network, the sessions on it and a sortable, filterable process table that jumps to the session a process belongs to. Processes are read only.",
+            "Each `ultd` samples CPU, memory, swap, disks, network and processes every 2 seconds on Linux and macOS and keeps an hour of history. Older `ultd` versions show \"update ultd on this machine to see its metrics\"; a machine with `NoMetrics` set says metrics are off.",
+            "The New session dialog has a Command field for kinds shell, server and editor. A server needs a command to run, for example `npm run dev`."
+          ]
+        },
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "The footer shows one cell per machine (name, CPU spark and load), the network rate, the journal age and the leader hint.",
+            "The Preview pane and the `0` pane key are gone (the dashboard replaces them)."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.2.3",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.2.2...v0.2.3",
+      "assets": [
+        {
+          "name": "ult-v0.2.3-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-linux-arm64.tar.gz",
+          "sha256": "b39017594aa202f877d07937a986f76f941464bcaa036e72b145fc1adaa680af"
+        },
+        {
+          "name": "ult-v0.2.3-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-linux-x64.tar.gz",
+          "sha256": "648b42f300aaf9f2085aba83510a77cbbd18a50bd88e14090109893413d065e7"
+        },
+        {
+          "name": "ult-v0.2.3-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-macos-arm64.tar.gz",
+          "sha256": "9e735b94bfae6c9c4aa9a88c7fc1e5e26577d4e811d8b2d9694085a9ddd5fae3"
+        },
+        {
+          "name": "ult-v0.2.3-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-macos-x64.tar.gz",
+          "sha256": "47a52f6b5d5ccda964ab3843fb702a06ad4dee65a4998c0e00f781b255f77c7a"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.2.3/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.2.3/checksums.txt.asc",
+      "notes_md": "ult now shows how busy every machine is: a dashboard on the main screen, a fleet view and a per-machine detail with processes.\n\n### Added\n\n- A dashboard replaces the Preview on the main screen: a fleet summary, what needs your attention (blocked and interrupted sessions, offline machines, hot CPU, RAM or disk, then recent events), each machine's CPU history and the busiest processes across machines.\n- `f` opens the fleet view, a card per machine with CPU, RAM, disk, network and its top processes. `enter` opens a machine's detail: CPU and RAM graphs (1 minute, 5 minutes, 1 hour), disks, network, the sessions on it and a sortable, filterable process table that jumps to the session a process belongs to. Processes are read only.\n- Each `ultd` samples CPU, memory, swap, disks, network and processes every 2 seconds on Linux and macOS and keeps an hour of history. Older `ultd` versions show \"update ultd on this machine to see its metrics\"; a machine with `NoMetrics` set says metrics are off.\n- The New session dialog has a Command field for kinds shell, server and editor. A server needs a command to run, for example `npm run dev`.\n\n### Changed\n\n- The footer shows one cell per machine (name, CPU spark and load), the network rate, the journal age and the leader hint.\n- The Preview pane and the `0` pane key are gone (the dashboard replaces them).\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.2.3\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.2.3-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-linux-arm64.tar.gz) | `b39017594aa202f8…` |\n| Linux x64 | [`ult-v0.2.3-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-linux-x64.tar.gz) | `648b42f300aaf9f2…` |\n| macOS arm64 | [`ult-v0.2.3-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-macos-arm64.tar.gz) | `9e735b94bfae6c9c…` |\n| macOS x64 | [`ult-v0.2.3-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.3/ult-v0.2.3-macos-x64.tar.gz) | `47a52f6b5d5ccda9…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.2.2...v0.2.3\n"
+    },
     {
       "version": "0.2.2",
       "tag": "v0.2.2",

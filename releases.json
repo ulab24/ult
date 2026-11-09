@@ -2,10 +2,69 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-09T05:06:26Z",
-  "latest": "v0.1.8",
+  "generated": "2026-11-09T07:37:07Z",
+  "latest": "v0.1.9",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.9",
+      "tag": "v0.1.9",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "Split panes in the TUI, tmux-style.",
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "Split panes: `^B %` and `^B \"` split side by side or stacked, `o ; arrows q x z { }` move, swap, zoom and close panes, Ctrl/Alt-arrows resize, `( ) s L` switch the session in a pane. Only the active pane takes input; click any pane to make it active, drag a border to resize, the wheel opens a pane's scrollback. Everything works from the keyboard alone. `max_panes` (default 8, 1 to 16) limits a layout; each workspace's layout is remembered. The daemon is not involved: panes are composed by the client, one attach per pane.",
+            "A session now lives in one terminal: attaching it from another terminal detaches the first, which is told why (`takeover` on `attach`, `taken-over` event; see docs/PROTOCOL.md). Read-only watchers are unaffected."
+          ]
+        },
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "The ult mark in the title bar is now three squares that always show (▛) with the fourth blinking while a session is working, instead of one blinking square."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.9",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.8...v0.1.9",
+      "assets": [
+        {
+          "name": "ult-v0.1.9-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-linux-arm64.tar.gz",
+          "sha256": "73cca063687879a2c5bea7f091684f684541e06cf0f2481ef22ecf627aaab991"
+        },
+        {
+          "name": "ult-v0.1.9-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-linux-x64.tar.gz",
+          "sha256": "3ea3572dcb99efafe3342bb0fd8070d07f90ffe25d064b07e5a23aa957ae6204"
+        },
+        {
+          "name": "ult-v0.1.9-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-macos-arm64.tar.gz",
+          "sha256": "e6feca08e1ce9b981f44f99e7546ea9cb594b25d40024db47b6ad69666f3fa81"
+        },
+        {
+          "name": "ult-v0.1.9-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-macos-x64.tar.gz",
+          "sha256": "830e1b6f1458d3899026e1d114fdfc6971dde7d7794af95675f0a32313d7480f"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.9/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.9/checksums.txt.asc",
+      "notes_md": "Split panes in the TUI, tmux-style.\n\n### Added\n\n- Split panes: `^B %` and `^B \"` split side by side or stacked, `o ; arrows q x z { }` move, swap, zoom and close panes, Ctrl/Alt-arrows resize, `( ) s L` switch the session in a pane. Only the active pane takes input; click any pane to make it active, drag a border to resize, the wheel opens a pane's scrollback. Everything works from the keyboard alone. `max_panes` (default 8, 1 to 16) limits a layout; each workspace's layout is remembered. The daemon is not involved: panes are composed by the client, one attach per pane.\n- A session now lives in one terminal: attaching it from another terminal detaches the first, which is told why (`takeover` on `attach`, `taken-over` event; see docs/PROTOCOL.md). Read-only watchers are unaffected.\n\n### Changed\n\n- The ult mark in the title bar is now three squares that always show (▛) with the fourth blinking while a session is working, instead of one blinking square.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.9\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.9-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-linux-arm64.tar.gz) | `73cca063687879a2…` |\n| Linux x64 | [`ult-v0.1.9-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-linux-x64.tar.gz) | `3ea3572dcb99efaf…` |\n| macOS arm64 | [`ult-v0.1.9-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-macos-arm64.tar.gz) | `e6feca08e1ce9b98…` |\n| macOS x64 | [`ult-v0.1.9-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.9/ult-v0.1.9-macos-x64.tar.gz) | `830e1b6f1458d389…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.8...v0.1.9\n"
+    },
     {
       "version": "0.1.8",
       "tag": "v0.1.8",
@@ -18,6 +77,7 @@
           "key": "added",
           "items": [
             "Mouse support in the TUI. Click a session to select it and double-click to attach; click a key hint (`n new`, `w workspaces`, `esc back` and so on) to press it; click the workspace name in the title bar to open the switcher and the machines to open theirs; in the switcher click a workspace or a session, double-click to switch or attach; the wheel scrolls the list, the switcher and the scrollback viewer. While attached, click a tab in the status bar to switch to it, or `new`, `list` and `detach` in its right-hand corner (the bar stays clickable even when the program uses the mouse itself). `mouse = off` turns all of it off; hold Shift (Option on macOS) to select text while it is on.",
+            "Dialogs take the mouse. In the New session dialog click a field to focus it (a choice field such as Machine or Kind also steps to its next value) and click `[ Create ]` or `[ Cancel ]`; in the Kill dialog click `[ Kill ]` or `[ Keep running ]`; in the folder picker click a folder, double-click to open it; a click closes help.",
             "A new session starts in its workspace's directory: the dialog offers the directory of the workspace's newest session on the chosen machine (and, from inside a session, that session's directory), not the home directory. Choosing another machine follows along until you type in the field."
           ]
         },
@@ -63,7 +123,7 @@
       ],
       "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.8/checksums.txt",
       "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.8/checksums.txt.asc",
-      "notes_md": "The TUI works with the mouse.\n\n### Added\n\n- Mouse support in the TUI. Click a session to select it and double-click to attach; click a key hint (`n new`, `w workspaces`, `esc back` and so on) to press it; click the workspace name in the title bar to open the switcher and the machines to open theirs; in the switcher click a workspace or a session, double-click to switch or attach; the wheel scrolls the list, the switcher and the scrollback viewer. While attached, click a tab in the status bar to switch to it, or `new`, `list` and `detach` in its right-hand corner (the bar stays clickable even when the program uses the mouse itself). `mouse = off` turns all of it off; hold Shift (Option on macOS) to select text while it is on.\n- A new session starts in its workspace's directory: the dialog offers the directory of the workspace's newest session on the chosen machine (and, from inside a session, that session's directory), not the home directory. Choosing another machine follows along until you type in the field.\n\n### Changed\n\n- Dialogs take the terminal's own background in the 16-colour palette and with a transparent theme, so they blend with any background, light or dark, instead of a black or white box.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.8\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.8-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-linux-arm64.tar.gz) | `60264b6841a3ffe2…` |\n| Linux x64 | [`ult-v0.1.8-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-linux-x64.tar.gz) | `e3ac1d52b72468c0…` |\n| macOS arm64 | [`ult-v0.1.8-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-macos-arm64.tar.gz) | `661958e6ba4aa605…` |\n| macOS x64 | [`ult-v0.1.8-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-macos-x64.tar.gz) | `2ccae8cfcc608dce…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.7...v0.1.8\n"
+      "notes_md": "The TUI works with the mouse.\n\n### Added\n\n- Mouse support in the TUI. Click a session to select it and double-click to attach; click a key hint (`n new`, `w workspaces`, `esc back` and so on) to press it; click the workspace name in the title bar to open the switcher and the machines to open theirs; in the switcher click a workspace or a session, double-click to switch or attach; the wheel scrolls the list, the switcher and the scrollback viewer. While attached, click a tab in the status bar to switch to it, or `new`, `list` and `detach` in its right-hand corner (the bar stays clickable even when the program uses the mouse itself). `mouse = off` turns all of it off; hold Shift (Option on macOS) to select text while it is on.\n- Dialogs take the mouse. In the New session dialog click a field to focus it (a choice field such as Machine or Kind also steps to its next value) and click `[ Create ]` or `[ Cancel ]`; in the Kill dialog click `[ Kill ]` or `[ Keep running ]`; in the folder picker click a folder, double-click to open it; a click closes help.\n- A new session starts in its workspace's directory: the dialog offers the directory of the workspace's newest session on the chosen machine (and, from inside a session, that session's directory), not the home directory. Choosing another machine follows along until you type in the field.\n\n### Changed\n\n- Dialogs take the terminal's own background in the 16-colour palette and with a transparent theme, so they blend with any background, light or dark, instead of a black or white box.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.8\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.8-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-linux-arm64.tar.gz) | `60264b6841a3ffe2…` |\n| Linux x64 | [`ult-v0.1.8-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-linux-x64.tar.gz) | `e3ac1d52b72468c0…` |\n| macOS arm64 | [`ult-v0.1.8-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-macos-arm64.tar.gz) | `661958e6ba4aa605…` |\n| macOS x64 | [`ult-v0.1.8-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.8/ult-v0.1.8-macos-x64.tar.gz) | `2ccae8cfcc608dce…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.7...v0.1.8\n"
     },
     {
       "version": "0.1.7",

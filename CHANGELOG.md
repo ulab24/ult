@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [0.2.4] - 2026-11-10
+
+Choosing a workspace shows all of its sessions again, and Workspaces and Machines swap places on the main screen.
+
+### Changed
+
+- The main screen's left column is now Workspaces `[1]`, Sessions `[2]` and Machines `[3]`. Workspaces and Machines swapped places, and so did their keys `1` and `3`.
+
+### Fixed
+
+- Choosing a workspace in its pane shows the workspace's sessions on every machine. Before, a machine picked earlier in the Machines pane kept hiding the other machines' sessions.
+
 ## [0.2.3] - 2026-11-10
 
 ult now shows how busy every machine is: a dashboard on the main screen, a fleet view and a per-machine detail with processes.

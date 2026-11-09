@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.10] - 2026-11-09
+
+Agents can be taught to start and steer other sessions.
+
+### Added
+
+- `ult add skill claude` and `ult add skill ulx` install a short skill that teaches the agent it can start, watch and steer other sessions through ult (`ult remove skill` takes it out; `--dry-run`, `--force`, `--print` for other agents). `ult doctor` shows whether it is installed or outdated.
+
 ## [0.1.9] - 2026-11-09
 
 Split panes in the TUI, tmux-style.

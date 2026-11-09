@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased]
+
+## [0.1.11] - 2026-11-09
+
+ulx sessions now report their own status.
+
+### Added
+
+- ulx sessions report their own status: a ulx running inside ult now shows working, blocked on a permission and finished, and `ult` resumes it with `ulx --resume <id>`. Needs ulx 0.4.0 or later; nothing to install.
+
 ## [0.1.10] - 2026-11-09
 
 Agents can be taught to start and steer other sessions.

@@ -2,6 +2,28 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-10
+
+ult now looks like lazygit next to nvim, is scriptable with Lua, and the Mac app will get the same setup.
+
+### Added
+
+- On a terminal of 100 columns by 24 rows or more the main screen is split into panes: Machines, Sessions and Workspaces on the left, a live Preview of the selected session and an Event log on the right. `1`, `2`, `3` and `0` focus a pane, `[` and `]` step inside it, and you can click panes. Smaller terminals keep the single list, and an attached session is never touched.
+- The folder picker is a large popup that shows each folder's name first with its parent dimmed, marks folders that have a live session with `●`, shows the full path of the highlighted folder underneath, ranks folders by what you used most recently and filters as you type.
+- `~/.config/ult/init.lua` configures ult (`ult.opt.theme = "light"`), binds keys in the session list, while attached and in the folder picker, shows popups, lists and input boxes, adds text to the status bar, changes colours and reacts to sessions starting, changing state, attaching and machines coming and going. A mistake in the file is reported with its file and line and the last good setup stays; nothing is half applied.
+- Plugins are folders in `~/.config/ult/plugins/`. They can do nothing about your sessions or your computer until you allow it: a plugin lists the permissions it wants (`sessions.read`, `sessions.control`, `exec`) and you grant them in `init.lua`. A plugin that keeps failing is switched off for you.
+- `ult plugins` lists plugins with their state and permissions, `ult lua check` tests your files, `ult lua eval` tries an expression, `ult doctor` has a Lua line, and `ult config show` now says where each setting comes from. The reference is `docs/LUA.md`, also on the ult page of ulab24.com under "Extending ult".
+- `ult bridge`, the endpoint the native app connects to, loads your `init.lua` and plugins and sends what they describe (settings, key bindings, status text, colours, popups, lists, input boxes and messages) to the app, which shows them and sends back the key presses and answers. A plugin that works in the terminal works in the app; the details are in `docs/BRIDGE.md`. The Swift package for the Mac app (`UltKit`) can read and send these messages.
+
+### Changed
+
+- In the folder picker you now type to filter, so the letter keys `j`, `k`, `h`, `l` and `r` no longer move around there; use the arrow keys, `enter`, `backspace` and `esc`.
+- The protocol version is now 1.1. Nothing changes for apps that do not ask for the new `ext` capability, and `ultd` is not involved.
+
+### Security
+
+- Lua runs only in the `ult` program you use, never in the background daemon, and is limited in time, memory and what it can touch (no files, no shell, no network).
+
 ## [0.1.11] - 2026-11-09
 
 ulx sessions now report their own status.

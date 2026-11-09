@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.9] - 2026-11-09
+
+Split panes in the TUI, tmux-style.
+
+### Changed
+
+- The ult mark in the title bar is now three squares that always show (▛) with the fourth blinking while a session is working, instead of one blinking square.
+
+### Added
+
+- Split panes: `^B %` and `^B "` split side by side or stacked, `o ; arrows q x z { }` move, swap, zoom and close panes, Ctrl/Alt-arrows resize, `( ) s L` switch the session in a pane. Only the active pane takes input; click any pane to make it active, drag a border to resize, the wheel opens a pane's scrollback. Everything works from the keyboard alone. `max_panes` (default 8, 1 to 16) limits a layout; each workspace's layout is remembered. The daemon is not involved: panes are composed by the client, one attach per pane.
+- A session now lives in one terminal: attaching it from another terminal detaches the first, which is told why (`takeover` on `attach`, `taken-over` event; see docs/PROTOCOL.md). Read-only watchers are unaffected.
+
 ## [0.1.8] - 2026-11-09
 
 The TUI works with the mouse.
@@ -7,6 +20,7 @@ The TUI works with the mouse.
 ### Added
 
 - Mouse support in the TUI. Click a session to select it and double-click to attach; click a key hint (`n new`, `w workspaces`, `esc back` and so on) to press it; click the workspace name in the title bar to open the switcher and the machines to open theirs; in the switcher click a workspace or a session, double-click to switch or attach; the wheel scrolls the list, the switcher and the scrollback viewer. While attached, click a tab in the status bar to switch to it, or `new`, `list` and `detach` in its right-hand corner (the bar stays clickable even when the program uses the mouse itself). `mouse = off` turns all of it off; hold Shift (Option on macOS) to select text while it is on.
+- Dialogs take the mouse. In the New session dialog click a field to focus it (a choice field such as Machine or Kind also steps to its next value) and click `[ Create ]` or `[ Cancel ]`; in the Kill dialog click `[ Kill ]` or `[ Keep running ]`; in the folder picker click a folder, double-click to open it; a click closes help.
 - A new session starts in its workspace's directory: the dialog offers the directory of the workspace's newest session on the chosen machine (and, from inside a session, that session's directory), not the home directory. Choosing another machine follows along until you type in the field.
 
 ### Changed

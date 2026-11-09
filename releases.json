@@ -2,10 +2,61 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-09T08:24:39Z",
-  "latest": "v0.1.10",
+  "generated": "2026-11-09T14:20:16Z",
+  "latest": "v0.1.11",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.11",
+      "tag": "v0.1.11",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "ulx sessions now report their own status.",
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "ulx sessions report their own status: a ulx running inside ult now shows working, blocked on a permission and finished, and `ult` resumes it with `ulx --resume \u003cid\u003e`. Needs ulx 0.4.0 or later; nothing to install."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.11",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.10...v0.1.11",
+      "assets": [
+        {
+          "name": "ult-v0.1.11-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-linux-arm64.tar.gz",
+          "sha256": "6dd8a96ff0f87f8968a576721533ea8f5a8f85d601f235077ad86f8209d24c92"
+        },
+        {
+          "name": "ult-v0.1.11-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-linux-x64.tar.gz",
+          "sha256": "40e06aeefdcb370c9a4f1b8e6e33308a8d2cd3ca702ece188eca96675db49b22"
+        },
+        {
+          "name": "ult-v0.1.11-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-macos-arm64.tar.gz",
+          "sha256": "94604fca1bbb5c00e44700bc07ee88f512ba05924c81a1061090f9408e1133a6"
+        },
+        {
+          "name": "ult-v0.1.11-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-macos-x64.tar.gz",
+          "sha256": "7c740cfb717738295e978c284fc73a0fbc93cd5d474697f9a6981990e8c1965e"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.11/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.11/checksums.txt.asc",
+      "notes_md": "ulx sessions now report their own status.\n\n### Added\n\n- ulx sessions report their own status: a ulx running inside ult now shows working, blocked on a permission and finished, and `ult` resumes it with `ulx --resume \u003cid\u003e`. Needs ulx 0.4.0 or later; nothing to install.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.11\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.11-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-linux-arm64.tar.gz) | `6dd8a96ff0f87f89…` |\n| Linux x64 | [`ult-v0.1.11-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-linux-x64.tar.gz) | `40e06aeefdcb370c…` |\n| macOS arm64 | [`ult-v0.1.11-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-macos-arm64.tar.gz) | `94604fca1bbb5c00…` |\n| macOS x64 | [`ult-v0.1.11-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.11/ult-v0.1.11-macos-x64.tar.gz) | `7c740cfb71773829…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.10...v0.1.11\n"
+    },
     {
       "version": "0.1.10",
       "tag": "v0.1.10",

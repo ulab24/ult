@@ -2,10 +2,68 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-09T22:26:49Z",
-  "latest": "v0.2.3",
+  "generated": "2026-11-09T22:45:19Z",
+  "latest": "v0.2.4",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.2.4",
+      "tag": "v0.2.4",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "summary": "Choosing a workspace shows all of its sessions again, and Workspaces and Machines swap places on the main screen.",
+      "sections": [
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "The main screen's left column is now Workspaces `[1]`, Sessions `[2]` and Machines `[3]`. Workspaces and Machines swapped places, and so did their keys `1` and `3`."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "Choosing a workspace in its pane shows the workspace's sessions on every machine. Before, a machine picked earlier in the Machines pane kept hiding the other machines' sessions."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.2.4",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.2.3...v0.2.4",
+      "assets": [
+        {
+          "name": "ult-v0.2.4-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-linux-arm64.tar.gz",
+          "sha256": "78a2ad3dd66d687d54c686cfeee3a9b663ac62de835d2d0b76495eac2419127a"
+        },
+        {
+          "name": "ult-v0.2.4-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-linux-x64.tar.gz",
+          "sha256": "6dbc7197983122e1b3b8c57c8fd8ad5b5a0e22fc2b054cbfac236e569e6efcc9"
+        },
+        {
+          "name": "ult-v0.2.4-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-macos-arm64.tar.gz",
+          "sha256": "f6422d4b77f2433197748087c229839be2ed284793d9892869904bf8ffa9e616"
+        },
+        {
+          "name": "ult-v0.2.4-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-macos-x64.tar.gz",
+          "sha256": "092ea1256c8af14c47230f2d106757d688ccfd0e62e1d5f6a94266105bc40c3f"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.2.4/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.2.4/checksums.txt.asc",
+      "notes_md": "Choosing a workspace shows all of its sessions again, and Workspaces and Machines swap places on the main screen.\n\n### Changed\n\n- The main screen's left column is now Workspaces `[1]`, Sessions `[2]` and Machines `[3]`. Workspaces and Machines swapped places, and so did their keys `1` and `3`.\n\n### Fixed\n\n- Choosing a workspace in its pane shows the workspace's sessions on every machine. Before, a machine picked earlier in the Machines pane kept hiding the other machines' sessions.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.2.4\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.2.4-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-linux-arm64.tar.gz) | `78a2ad3dd66d687d…` |\n| Linux x64 | [`ult-v0.2.4-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-linux-x64.tar.gz) | `6dbc7197983122e1…` |\n| macOS arm64 | [`ult-v0.2.4-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-macos-arm64.tar.gz) | `f6422d4b77f24331…` |\n| macOS x64 | [`ult-v0.2.4-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.4/ult-v0.2.4-macos-x64.tar.gz) | `092ea1256c8af14c…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.2.3...v0.2.4\n"
+    },
     {
       "version": "0.2.3",
       "tag": "v0.2.3",

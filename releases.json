@@ -2,10 +2,61 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-09T07:37:07Z",
-  "latest": "v0.1.9",
+  "generated": "2026-11-09T08:24:39Z",
+  "latest": "v0.1.10",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.1.10",
+      "tag": "v0.1.10",
+      "date": "2026-11-09",
+      "prerelease": false,
+      "summary": "Agents can be taught to start and steer other sessions.",
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "`ult add skill claude` and `ult add skill ulx` install a short skill that teaches the agent it can start, watch and steer other sessions through ult (`ult remove skill` takes it out; `--dry-run`, `--force`, `--print` for other agents). `ult doctor` shows whether it is installed or outdated."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.1.10",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.9...v0.1.10",
+      "assets": [
+        {
+          "name": "ult-v0.1.10-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-linux-arm64.tar.gz",
+          "sha256": "bf4b75c3d1be0e99c357b2a0bdd027c1ec8c167a4c2710e3f1e499569a5aac33"
+        },
+        {
+          "name": "ult-v0.1.10-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-linux-x64.tar.gz",
+          "sha256": "78b06019c0a3647567451bc0ea0edf0da9582eb16311d1a7b3b2d0e039fdc19f"
+        },
+        {
+          "name": "ult-v0.1.10-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-macos-arm64.tar.gz",
+          "sha256": "ab201fbf05a0f5439636c26de80ebfd4c27e27bc3fe8885a5b8a1d07062635e7"
+        },
+        {
+          "name": "ult-v0.1.10-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-macos-x64.tar.gz",
+          "sha256": "74be304d491c6360a6f257c78a4bbc0cdd14890c4de9d6543bccc3fab962b706"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.1.10/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.1.10/checksums.txt.asc",
+      "notes_md": "Agents can be taught to start and steer other sessions.\n\n### Added\n\n- `ult add skill claude` and `ult add skill ulx` install a short skill that teaches the agent it can start, watch and steer other sessions through ult (`ult remove skill` takes it out; `--dry-run`, `--force`, `--print` for other agents). `ult doctor` shows whether it is installed or outdated.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.1.10\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.1.10-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-linux-arm64.tar.gz) | `bf4b75c3d1be0e99…` |\n| Linux x64 | [`ult-v0.1.10-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-linux-x64.tar.gz) | `78b06019c0a36475…` |\n| macOS arm64 | [`ult-v0.1.10-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-macos-arm64.tar.gz) | `ab201fbf05a0f543…` |\n| macOS x64 | [`ult-v0.1.10-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.1.10/ult-v0.1.10-macos-x64.tar.gz) | `74be304d491c6360…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.9...v0.1.10\n"
+    },
     {
       "version": "0.1.9",
       "tag": "v0.1.9",

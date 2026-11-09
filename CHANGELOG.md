@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-11-10
+
+ult now shows how busy every machine is: a dashboard on the main screen, a fleet view and a per-machine detail with processes.
+
+### Added
+
+- A dashboard replaces the Preview on the main screen: a fleet summary, what needs your attention (blocked and interrupted sessions, offline machines, hot CPU, RAM or disk, then recent events), each machine's CPU history and the busiest processes across machines.
+- `f` opens the fleet view, a card per machine with CPU, RAM, disk, network and its top processes. `enter` opens a machine's detail: CPU and RAM graphs (1 minute, 5 minutes, 1 hour), disks, network, the sessions on it and a sortable, filterable process table that jumps to the session a process belongs to. Processes are read only.
+- Each `ultd` samples CPU, memory, swap, disks, network and processes every 2 seconds on Linux and macOS and keeps an hour of history. Older `ultd` versions show "update ultd on this machine to see its metrics"; a machine with `NoMetrics` set says metrics are off.
+- The New session dialog has a Command field for kinds shell, server and editor. A server needs a command to run, for example `npm run dev`.
+
+### Changed
+
+- The footer shows one cell per machine (name, CPU spark and load), the network rate, the journal age and the leader hint.
+- The Preview pane and the `0` pane key are gone (the dashboard replaces them).
+
 ## [0.2.2] - 2026-11-10
 
 Machines, workspaces and the new-session dialog are popups over the main view, adding a machine is a wizard, and the Preview pane shows the real screen.

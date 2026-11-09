@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-10
+
+Claude Code in a session no longer breaks ult's keys or prints stray characters.
+
+### Fixed
+
+- While a program such as Claude Code had the extended keyboard mode on, `^B` and the keys after it did nothing, because your terminal then sends them in a different form. ult now understands both forms (the kitty keyboard protocol and xterm's modifyOtherKeys), so the prefix keys work, and keys that are not ult's still reach the program unchanged.
+- Strings like `^[[?62;22;52c` and `^[P1+r5463...` no longer appear at the shell prompt. Programs ask the terminal what it can do and the terminal answers; ult used to ask again for every question in the replayed history when you attached, and typed the answers into whatever was in front. Questions in the replay are now left out, and an answer nobody asked for is dropped.
+- Leaving a session now puts the keyboard modes back completely. A program that turned on the extended keyboard mode more than once used to leave your terminal in it, which broke the keys in the next session.
+- Focus reports (`^[[I`) are passed on to a program only while it has asked for them, even when the request arrives split across two reads.
+
 ## [0.2.0] - 2026-11-10
 
 ult now looks like lazygit next to nvim, is scriptable with Lua, and the Mac app will get the same setup.

@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.8] - 2026-11-09
+
+The TUI works with the mouse.
+
+### Added
+
+- Mouse support in the TUI. Click a session to select it and double-click to attach; click a key hint (`n new`, `w workspaces`, `esc back` and so on) to press it; click the workspace name in the title bar to open the switcher and the machines to open theirs; in the switcher click a workspace or a session, double-click to switch or attach; the wheel scrolls the list, the switcher and the scrollback viewer. While attached, click a tab in the status bar to switch to it, or `new`, `list` and `detach` in its right-hand corner (the bar stays clickable even when the program uses the mouse itself). `mouse = off` turns all of it off; hold Shift (Option on macOS) to select text while it is on.
+- A new session starts in its workspace's directory: the dialog offers the directory of the workspace's newest session on the chosen machine (and, from inside a session, that session's directory), not the home directory. Choosing another machine follows along until you type in the field.
+
+### Changed
+
+- Dialogs take the terminal's own background in the 16-colour palette and with a transparent theme, so they blend with any background, light or dark, instead of a black or white box.
+
 ## [0.1.7] - 2026-11-09
 
 The TUI shows one workspace at a time, and every session is in one.

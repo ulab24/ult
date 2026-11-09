@@ -2,10 +2,81 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-09T14:20:16Z",
-  "latest": "v0.1.11",
+  "generated": "2026-11-09T18:52:17Z",
+  "latest": "v0.2.0",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.2.0",
+      "tag": "v0.2.0",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "summary": "ult now looks like lazygit next to nvim, is scriptable with Lua, and the Mac app will get the same setup.",
+      "sections": [
+        {
+          "name": "Security",
+          "key": "security",
+          "items": [
+            "Lua runs only in the `ult` program you use, never in the background daemon, and is limited in time, memory and what it can touch (no files, no shell, no network)."
+          ]
+        },
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "On a terminal of 100 columns by 24 rows or more the main screen is split into panes: Machines, Sessions and Workspaces on the left, a live Preview of the selected session and an Event log on the right. `1`, `2`, `3` and `0` focus a pane, `[` and `]` step inside it, and you can click panes. Smaller terminals keep the single list, and an attached session is never touched.",
+            "The folder picker is a large popup that shows each folder's name first with its parent dimmed, marks folders that have a live session with `●`, shows the full path of the highlighted folder underneath, ranks folders by what you used most recently and filters as you type.",
+            "`~/.config/ult/init.lua` configures ult (`ult.opt.theme = \"light\"`), binds keys in the session list, while attached and in the folder picker, shows popups, lists and input boxes, adds text to the status bar, changes colours and reacts to sessions starting, changing state, attaching and machines coming and going. A mistake in the file is reported with its file and line and the last good setup stays; nothing is half applied.",
+            "Plugins are folders in `~/.config/ult/plugins/`. They can do nothing about your sessions or your computer until you allow it: a plugin lists the permissions it wants (`sessions.read`, `sessions.control`, `exec`) and you grant them in `init.lua`. A plugin that keeps failing is switched off for you.",
+            "`ult plugins` lists plugins with their state and permissions, `ult lua check` tests your files, `ult lua eval` tries an expression, `ult doctor` has a Lua line, and `ult config show` now says where each setting comes from. The reference is `docs/LUA.md`, also on the ult page of ulab24.com under \"Extending ult\".",
+            "`ult bridge`, the endpoint the native app connects to, loads your `init.lua` and plugins and sends what they describe (settings, key bindings, status text, colours, popups, lists, input boxes and messages) to the app, which shows them and sends back the key presses and answers. A plugin that works in the terminal works in the app; the details are in `docs/BRIDGE.md`. The Swift package for the Mac app (`UltKit`) can read and send these messages."
+          ]
+        },
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "In the folder picker you now type to filter, so the letter keys `j`, `k`, `h`, `l` and `r` no longer move around there; use the arrow keys, `enter`, `backspace` and `esc`.",
+            "The protocol version is now 1.1. Nothing changes for apps that do not ask for the new `ext` capability, and `ultd` is not involved."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.2.0",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.1.11...v0.2.0",
+      "assets": [
+        {
+          "name": "ult-v0.2.0-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-linux-arm64.tar.gz",
+          "sha256": "34b80754602474d592c0188de716e981a547df0c2c1aaaa54a40657086b12f0e"
+        },
+        {
+          "name": "ult-v0.2.0-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-linux-x64.tar.gz",
+          "sha256": "c7387640c57d10240bf6da0a0d7ba28e8431e007053336239c4042fedbc0e4a5"
+        },
+        {
+          "name": "ult-v0.2.0-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-macos-arm64.tar.gz",
+          "sha256": "e33c50e1ee6751ccee449ecb18d6f9720148afa36dfe6fa22c98bced4c6066f7"
+        },
+        {
+          "name": "ult-v0.2.0-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-macos-x64.tar.gz",
+          "sha256": "a4a32dbb825a3e488e455d52bad65b33d356b7f01eb7f3ca0e8070194b81f372"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.2.0/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.2.0/checksums.txt.asc",
+      "notes_md": "ult now looks like lazygit next to nvim, is scriptable with Lua, and the Mac app will get the same setup.\n\n### Security\n\n- Lua runs only in the `ult` program you use, never in the background daemon, and is limited in time, memory and what it can touch (no files, no shell, no network).\n\n### Added\n\n- On a terminal of 100 columns by 24 rows or more the main screen is split into panes: Machines, Sessions and Workspaces on the left, a live Preview of the selected session and an Event log on the right. `1`, `2`, `3` and `0` focus a pane, `[` and `]` step inside it, and you can click panes. Smaller terminals keep the single list, and an attached session is never touched.\n- The folder picker is a large popup that shows each folder's name first with its parent dimmed, marks folders that have a live session with `●`, shows the full path of the highlighted folder underneath, ranks folders by what you used most recently and filters as you type.\n- `~/.config/ult/init.lua` configures ult (`ult.opt.theme = \"light\"`), binds keys in the session list, while attached and in the folder picker, shows popups, lists and input boxes, adds text to the status bar, changes colours and reacts to sessions starting, changing state, attaching and machines coming and going. A mistake in the file is reported with its file and line and the last good setup stays; nothing is half applied.\n- Plugins are folders in `~/.config/ult/plugins/`. They can do nothing about your sessions or your computer until you allow it: a plugin lists the permissions it wants (`sessions.read`, `sessions.control`, `exec`) and you grant them in `init.lua`. A plugin that keeps failing is switched off for you.\n- `ult plugins` lists plugins with their state and permissions, `ult lua check` tests your files, `ult lua eval` tries an expression, `ult doctor` has a Lua line, and `ult config show` now says where each setting comes from. The reference is `docs/LUA.md`, also on the ult page of ulab24.com under \"Extending ult\".\n- `ult bridge`, the endpoint the native app connects to, loads your `init.lua` and plugins and sends what they describe (settings, key bindings, status text, colours, popups, lists, input boxes and messages) to the app, which shows them and sends back the key presses and answers. A plugin that works in the terminal works in the app; the details are in `docs/BRIDGE.md`. The Swift package for the Mac app (`UltKit`) can read and send these messages.\n\n### Changed\n\n- In the folder picker you now type to filter, so the letter keys `j`, `k`, `h`, `l` and `r` no longer move around there; use the arrow keys, `enter`, `backspace` and `esc`.\n- The protocol version is now 1.1. Nothing changes for apps that do not ask for the new `ext` capability, and `ultd` is not involved.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.2.0\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.2.0-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-linux-arm64.tar.gz) | `34b80754602474d5…` |\n| Linux x64 | [`ult-v0.2.0-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-linux-x64.tar.gz) | `c7387640c57d1024…` |\n| macOS arm64 | [`ult-v0.2.0-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-macos-arm64.tar.gz) | `e33c50e1ee6751cc…` |\n| macOS x64 | [`ult-v0.2.0-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.0/ult-v0.2.0-macos-x64.tar.gz) | `a4a32dbb825a3e48…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.1.11...v0.2.0\n"
+    },
     {
       "version": "0.1.11",
       "tag": "v0.1.11",

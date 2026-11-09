@@ -2,6 +2,28 @@
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-11-10
+
+Machines, workspaces and the new-session dialog are popups over the main view, adding a machine is a wizard, and the Preview pane shows the real screen.
+
+### Added
+
+- Adding a machine no longer means editing a file: in the machines view (`m`) press `a` and a popup asks for the ssh address, suggests a name, tests the connection the way ult connects, and writes the `machine` line to your config when it works. If the test fails it shows why and lets you try again, change the address or add the machine anyway. `e` still opens the config in vim.
+
+### Changed
+
+- The new-session dialog is larger and easier to use: every machine, kind and restart choice is shown and clickable, the directory and name are boxes, a line says what will be started, and a hint explains the focused field.
+- Popups keep the terminal's own background, so your background picture shows through, but their lines, titles and text now use the bright colours (in both the dark and light themes) so they stay readable on it.
+- `w` now opens workspace management as a large popup over the dimmed main view instead of a separate screen: workspaces on the left, the selected workspace's sessions on the right (stacked on a narrow terminal). The keys are the same (`enter`, `tab`, `n`, `a`, `d`, `r`, `D`, `x`, `esc`) and the mouse works in it.
+- `m` opens machine management as the same kind of large popup: machines on the left (sessions, online state), the selected machine's target, state and sessions on the right. Keys are unchanged (`enter` lists its sessions, `a` add, `e` edit, `d` remove, `r` retry, `esc` back) and the mouse works in it.
+- The Preview pane now shows the session's screen as it looks, not its output with the escape codes cut out. Words are spaced properly, redraws replace the old text instead of piling up, and the preview is laid out at the session's own size. It shows plain text; colours are not drawn.
+- Scrolling down past the end of the scrollback viewer with the mouse wheel leaves it and puts you back in the session, so you no longer need `q` or `esc` after scrolling up to look. The notches of the same flick that reached the end are ignored, so it does not jump out early.
+- `^B m` while attached turns mouse reporting off, so a plain drag selects text and copies as in any terminal, and turns it on again for the wheel and the bar. The bar says `mouse off` while it is off, and the choice stays across sessions until you flip it back or leave the session. It is listed in `^B ?`. (Holding Shift, or Option on macOS, while dragging still selects with the mouse on.)
+
+### Fixed
+
+- The scrollback viewer (mouse wheel, or the prefix then `[`) keeps the colours the program used. It used to strip them and draw everything in the theme's text colour, so a session looked plain white or black, most of all in the light theme. It now shows the same colours as the live session, like tmux's scroll mode. It also replays carriage returns, backspaces and erase-to-end-of-line, so a shell's prompt redraw (zsh's reverse `%` marker and its padding) no longer shows up as a stack of extra `%` lines.
+
 ## [0.2.1] - 2026-11-10
 
 Claude Code in a session no longer breaks ult's keys or prints stray characters.

@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-10
+
+### Added
+
+- Drop a file on the terminal while attached to a session on another machine and ult sends it there. The terminal types the dropped file's path; ult sees a paste that is nothing but paths of local files, uploads each one to the session's machine and types the path it has there instead. A session running claude, ulx, opencode, codex or another agent (also one you started by hand in a shell) gets the file in a private temporary folder, `uploads/<session id>/` in ultd's data folder, cleared after 3 days. A shell gets the file in the folder the shell is in right now, and the path is typed; an editor, server or other program gets the file in its folder and nothing is typed. The status bar shows the progress and the result.
+- `drop = off` in the config turns it off. Files that look like credentials (`.ssh`, `.gnupg`, `.aws`, `.kube`, `id_rsa`-style keys, `.pem`, `.p12`, `.kdbx` and a few more) are never sent. Sessions on the machine you are on are left alone, since the path already works there.
+- New `upload` operation in the protocol (1.2): chunked, up to 100 MiB per file, only from a client attached read-write to the session, never overwriting, with names reduced to letters, digits and `. _ - + @ ,`. An older `ultd` answers "update ultd on that machine to send files".
+
+### Fixed
+
+- `ult stop` no longer reports "connection lost during stop" when the daemon closed the connection because it was told to stop.
+
 ## [0.2.8] - 2026-11-10
 
 ### Fixed

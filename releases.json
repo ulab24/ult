@@ -2,10 +2,68 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-09T22:45:19Z",
-  "latest": "v0.2.4",
+  "generated": "2026-11-10T09:14:16Z",
+  "latest": "v0.2.5",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.2.5",
+      "tag": "v0.2.5",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "summary": "Quitting an editor in a session no longer wipes the screen, and new sessions start as a shell.",
+      "sections": [
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "The New session dialog opens on `shell` and lists it first, instead of `claude`."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "After you quit nvim, vim, less or another full-screen program started from a shell, the shell's earlier output is back on screen. Before, ult cleared the screen and only the new prompt showed, sometimes under blank lines."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.2.5",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.2.4...v0.2.5",
+      "assets": [
+        {
+          "name": "ult-v0.2.5-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-linux-arm64.tar.gz",
+          "sha256": "53b2eece08219dda6778d134def09ac3f191c49b138daa1d4b1323b1faa11208"
+        },
+        {
+          "name": "ult-v0.2.5-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-linux-x64.tar.gz",
+          "sha256": "86133a4555d2352d7e2489cf560d5ca122b46e0da10d2eab4ba04911168c5200"
+        },
+        {
+          "name": "ult-v0.2.5-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-macos-arm64.tar.gz",
+          "sha256": "cd74074a45bd328b1db72821ef908a81ba91f631abed72994fef51d39ee3d2fe"
+        },
+        {
+          "name": "ult-v0.2.5-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-macos-x64.tar.gz",
+          "sha256": "ea97e449a5ea8620a9cd74a5eae80b36e921a0b3c24e9a7ab2a2aeb984b0feb7"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.2.5/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.2.5/checksums.txt.asc",
+      "notes_md": "Quitting an editor in a session no longer wipes the screen, and new sessions start as a shell.\n\n### Changed\n\n- The New session dialog opens on `shell` and lists it first, instead of `claude`.\n\n### Fixed\n\n- After you quit nvim, vim, less or another full-screen program started from a shell, the shell's earlier output is back on screen. Before, ult cleared the screen and only the new prompt showed, sometimes under blank lines.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.2.5\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.2.5-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-linux-arm64.tar.gz) | `53b2eece08219dda…` |\n| Linux x64 | [`ult-v0.2.5-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-linux-x64.tar.gz) | `86133a4555d2352d…` |\n| macOS arm64 | [`ult-v0.2.5-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-macos-arm64.tar.gz) | `cd74074a45bd328b…` |\n| macOS x64 | [`ult-v0.2.5-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.5/ult-v0.2.5-macos-x64.tar.gz) | `ea97e449a5ea8620…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.2.4...v0.2.5\n"
+    },
     {
       "version": "0.2.4",
       "tag": "v0.2.4",

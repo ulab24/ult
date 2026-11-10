@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-11-10
+
+### Changed
+
+- A file dropped on a shell is saved in the folder the shell is in and the status bar says so (`saved name in folder/`), but its path is no longer typed at the prompt. Agent sessions still get the temporary file's path typed in.
+
+### Fixed
+
+- Dropping a file on a local `claude` (or other agent) session did nothing when the session had been running for a while: the program turns bracketed paste on once, at its start, and a terminal that attached later never saw it, so the dropped path arrived as typed text. The daemon now follows that mode and switches it back on when a client attaches.
+
 ## [0.3.0] - 2026-11-10
 
 ### Added

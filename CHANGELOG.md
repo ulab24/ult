@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [0.2.5] - 2026-11-10
+
+Quitting an editor in a session no longer wipes the screen, and new sessions start as a shell.
+
+### Changed
+
+- The New session dialog opens on `shell` and lists it first, instead of `claude`.
+
+### Fixed
+
+- After you quit nvim, vim, less or another full-screen program started from a shell, the shell's earlier output is back on screen. Before, ult cleared the screen and only the new prompt showed, sometimes under blank lines.
+
 ## [0.2.4] - 2026-11-10
 
 Choosing a workspace shows all of its sessions again, and Workspaces and Machines swap places on the main screen.

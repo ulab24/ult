@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.2.8] - 2026-11-10
+
+### Fixed
+
+- Quitting nvim in a session you attached to while nvim was already open no longer leaves nvim's screen behind. The daemon replays the last 256 KiB of output on attach; when nvim had been open longer than that, its "enter the alternate screen" was cut off, so ult mistook nvim's drawing for the shell's own screen and repainted it on quit. The daemon now follows each session's alternate-screen state itself and restores the missing enter at the start of the replay. The shell's earlier screen is then not known, so it comes back blank until the shell redraws (press Enter).
+
 ## [0.2.7] - 2026-11-10
 
 ### Fixed

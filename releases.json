@@ -2,10 +2,60 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T12:40:03Z",
-  "latest": "v0.3.1",
+  "generated": "2026-11-10T12:55:21Z",
+  "latest": "v0.3.2",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.3.2",
+      "tag": "v0.3.2",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "A terminal's answer to an image-support probe (the kitty graphics protocol, `ESC _ G … ESC \\`, sent by programs such as `claude`) was typed into the shell as text like `Gi=31;OK`. These answers are now matched with their probes like other terminal replies, and probes in replayed scrollback are dropped."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.3.2",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.3.1...v0.3.2",
+      "assets": [
+        {
+          "name": "ult-v0.3.2-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-linux-arm64.tar.gz",
+          "sha256": "71f84366c4bc8265453eb617b05f2f9c0e5ddc085862dc835821e1d0899b3c66"
+        },
+        {
+          "name": "ult-v0.3.2-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-linux-x64.tar.gz",
+          "sha256": "9d1bbdb09601bc92c1f556bc6aca1ea68ae01c16c72fbeed5e7f56bbd43e9a8f"
+        },
+        {
+          "name": "ult-v0.3.2-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-macos-arm64.tar.gz",
+          "sha256": "565b966c68ba5ff4376ae70b56cf430d33fe80594777ed007ebbb01474c5a8fa"
+        },
+        {
+          "name": "ult-v0.3.2-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-macos-x64.tar.gz",
+          "sha256": "b8761a3fd8c2bcab6b22ea29215730b28d05e6fb8c3cb579629d91eaddb7ac9b"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.3.2/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.3.2/checksums.txt.asc",
+      "notes_md": "### Fixed\n\n- A terminal's answer to an image-support probe (the kitty graphics protocol, `ESC _ G … ESC \\`, sent by programs such as `claude`) was typed into the shell as text like `Gi=31;OK`. These answers are now matched with their probes like other terminal replies, and probes in replayed scrollback are dropped.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.3.2\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.3.2-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-linux-arm64.tar.gz) | `71f84366c4bc8265…` |\n| Linux x64 | [`ult-v0.3.2-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-linux-x64.tar.gz) | `9d1bbdb09601bc92…` |\n| macOS arm64 | [`ult-v0.3.2-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-macos-arm64.tar.gz) | `565b966c68ba5ff4…` |\n| macOS x64 | [`ult-v0.3.2-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.2/ult-v0.3.2-macos-x64.tar.gz) | `b8761a3fd8c2bcab…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.3.1...v0.3.2\n"
+    },
     {
       "version": "0.3.1",
       "tag": "v0.3.1",

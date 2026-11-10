@@ -2,10 +2,60 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T12:55:21Z",
-  "latest": "v0.3.2",
+  "generated": "2026-11-10T13:08:28Z",
+  "latest": "v0.3.3",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.3.3",
+      "tag": "v0.3.3",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "A file dropped on a `claude` (or other agent) session on the same machine now reaches it the way a remote drop does: ult recognises the drop and types the file's path into the session as a paste, instead of relying on the terminal's own paste getting through. Shells and editors on this machine keep the terminal's paste untouched."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.3.3",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.3.2...v0.3.3",
+      "assets": [
+        {
+          "name": "ult-v0.3.3-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-linux-arm64.tar.gz",
+          "sha256": "a959f96a4211e3f76a978d98a01b54275802000e4c75f99cbd492ccc5dc1523c"
+        },
+        {
+          "name": "ult-v0.3.3-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-linux-x64.tar.gz",
+          "sha256": "02f438112fc6421377da763e5ae28b226378528fab6f3aa89c7f72962ade6322"
+        },
+        {
+          "name": "ult-v0.3.3-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-macos-arm64.tar.gz",
+          "sha256": "397fd6953977999335b631af4061d36e192e10f698b7341d6bb8633fb61b57f1"
+        },
+        {
+          "name": "ult-v0.3.3-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-macos-x64.tar.gz",
+          "sha256": "057a66e1188e494114d0c0dedf00066481b5fd5de686adb8d14f74ee684f037e"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.3.3/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.3.3/checksums.txt.asc",
+      "notes_md": "### Fixed\n\n- A file dropped on a `claude` (or other agent) session on the same machine now reaches it the way a remote drop does: ult recognises the drop and types the file's path into the session as a paste, instead of relying on the terminal's own paste getting through. Shells and editors on this machine keep the terminal's paste untouched.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.3.3\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.3.3-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-linux-arm64.tar.gz) | `a959f96a4211e3f7…` |\n| Linux x64 | [`ult-v0.3.3-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-linux-x64.tar.gz) | `02f438112fc64213…` |\n| macOS arm64 | [`ult-v0.3.3-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-macos-arm64.tar.gz) | `397fd69539779993…` |\n| macOS x64 | [`ult-v0.3.3-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.3/ult-v0.3.3-macos-x64.tar.gz) | `057a66e1188e4941…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.3.2...v0.3.3\n"
+    },
     {
       "version": "0.3.2",
       "tag": "v0.3.2",

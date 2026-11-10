@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.3.3] - 2026-11-10
+
+### Fixed
+
+- A file dropped on a `claude` (or other agent) session on the same machine now reaches it the way a remote drop does: ult recognises the drop and types the file's path into the session as a paste, instead of relying on the terminal's own paste getting through. Shells and editors on this machine keep the terminal's paste untouched.
+
 ## [0.3.2] - 2026-11-10
 
 ### Fixed

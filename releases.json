@@ -2,10 +2,60 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T09:17:28Z",
-  "latest": "v0.2.6",
+  "generated": "2026-11-10T10:21:40Z",
+  "latest": "v0.2.7",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.2.7",
+      "tag": "v0.2.7",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "A session whose program is not on the daemon's PATH (`program \"claude\" not found in PATH`) now starts. A daemon started by a service, `ssh -c` or a remote login has a bare PATH, so agents installed in `~/.local/bin` or under nvm were not found. When a program is missing, ult asks the user's login shell for its PATH (once a minute at most, 5 second limit) and starts the program with it. A program found on the daemon's own PATH never triggers this."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.2.7",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.2.6...v0.2.7",
+      "assets": [
+        {
+          "name": "ult-v0.2.7-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-linux-arm64.tar.gz",
+          "sha256": "98484621ffae143ddd6a380d5786dd9fbe755f97f6c48f754af456fc430ddceb"
+        },
+        {
+          "name": "ult-v0.2.7-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-linux-x64.tar.gz",
+          "sha256": "21a45c7ed99200cf1e155b3485997e890bfa5ed1eb85e12f65965301fd04ee03"
+        },
+        {
+          "name": "ult-v0.2.7-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-macos-arm64.tar.gz",
+          "sha256": "4a04f2edd4b032585a6e06560e85b0b5a196bd9bd33ce122d0dce3df48c36f6f"
+        },
+        {
+          "name": "ult-v0.2.7-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-macos-x64.tar.gz",
+          "sha256": "a75f6db50a9893c636b156256d010c312746ca7f868c56664063b6d82adff304"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.2.7/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.2.7/checksums.txt.asc",
+      "notes_md": "### Fixed\n\n- A session whose program is not on the daemon's PATH (`program \"claude\" not found in PATH`) now starts. A daemon started by a service, `ssh -c` or a remote login has a bare PATH, so agents installed in `~/.local/bin` or under nvm were not found. When a program is missing, ult asks the user's login shell for its PATH (once a minute at most, 5 second limit) and starts the program with it. A program found on the daemon's own PATH never triggers this.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.2.7\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.2.7-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-linux-arm64.tar.gz) | `98484621ffae143d…` |\n| Linux x64 | [`ult-v0.2.7-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-linux-x64.tar.gz) | `21a45c7ed99200cf…` |\n| macOS arm64 | [`ult-v0.2.7-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-macos-arm64.tar.gz) | `4a04f2edd4b03258…` |\n| macOS x64 | [`ult-v0.2.7-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.7/ult-v0.2.7-macos-x64.tar.gz) | `a75f6db50a9893c6…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.2.6...v0.2.7\n"
+    },
     {
       "version": "0.2.6",
       "tag": "v0.2.6",

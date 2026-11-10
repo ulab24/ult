@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [0.3.4] - 2026-11-10
+
+### Changed
+
+- An attached session now has a rule (a thin line) between the program and the status bar, so a program's own status line no longer sits flush against the bar. The program gets two rows less than the terminal.
+
+### Fixed
+
+- The status bar sometimes disappeared until the next redraw (up to a second) when a program cleared or reset the screen, for example `nvim` and `claude` on start, exit or resize. The bar and rule are now painted again right after output that erases or resets the screen, including a sequence split across two reads.
+
+### Added
+
+- `ULT_DEBUG_DROP=/path/file ult` logs what looks like a paste coming from the terminal and what ult does with it, to find out why a dropped file did not arrive. Off by default; it logs pasted text, never single keystrokes.
+
 ## [0.3.3] - 2026-11-10
 
 ### Fixed

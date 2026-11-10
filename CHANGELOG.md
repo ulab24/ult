@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [0.2.6] - 2026-11-10
+
+### Added
+
+- A plain shell now reports what runs in it. The session shows the command in the foreground and for how long ("make for 3m"), turns `working` while it runs and `idle` at the prompt, and carries the marker of the program inside it: `nv` for nvim and vim, `cc` for claude, `ux` for ulx and so on.
+- A command that runs 15 seconds or longer and then ends marks the shell `finished` and sends a notification ("make finished in 42s") when nobody is attached. Quick commands, editors, pagers and `ssh` never notify.
+- A command that stops on a question (`[y/N]`, a password, "Enter a name:") turns the shell `blocked` with the question, and notifies. ult only tells you; it never types an answer into a plain shell.
+- A coding agent started by hand in a shell (claude, ulx, codex ...) gets the same status engine and permission-prompt reading as an agent session.
+
 ## [0.2.5] - 2026-11-10
 
 Quitting an editor in a session no longer wipes the screen, and new sessions start as a shell.

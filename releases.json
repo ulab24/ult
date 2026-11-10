@@ -2,10 +2,63 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T09:14:16Z",
-  "latest": "v0.2.5",
+  "generated": "2026-11-10T09:17:28Z",
+  "latest": "v0.2.6",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.2.6",
+      "tag": "v0.2.6",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "A plain shell now reports what runs in it. The session shows the command in the foreground and for how long (\"make for 3m\"), turns `working` while it runs and `idle` at the prompt, and carries the marker of the program inside it: `nv` for nvim and vim, `cc` for claude, `ux` for ulx and so on.",
+            "A command that runs 15 seconds or longer and then ends marks the shell `finished` and sends a notification (\"make finished in 42s\") when nobody is attached. Quick commands, editors, pagers and `ssh` never notify.",
+            "A command that stops on a question (`[y/N]`, a password, \"Enter a name:\") turns the shell `blocked` with the question, and notifies. ult only tells you; it never types an answer into a plain shell.",
+            "A coding agent started by hand in a shell (claude, ulx, codex ...) gets the same status engine and permission-prompt reading as an agent session."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.2.6",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.2.5...v0.2.6",
+      "assets": [
+        {
+          "name": "ult-v0.2.6-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-linux-arm64.tar.gz",
+          "sha256": "93270491e130fcf56427d40f32570e4c6a13b5d5c729754394284fcdf2af36c3"
+        },
+        {
+          "name": "ult-v0.2.6-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-linux-x64.tar.gz",
+          "sha256": "91648464f31f88a2916748ed82abd9591e941fd4248f8e53dfc6132ba4054677"
+        },
+        {
+          "name": "ult-v0.2.6-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-macos-arm64.tar.gz",
+          "sha256": "2c9661689956adc0365ed20b69be5751611f0b5d8ddb9a79794e1d432335810f"
+        },
+        {
+          "name": "ult-v0.2.6-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-macos-x64.tar.gz",
+          "sha256": "7296f6e306f4b469711f1f7affc875e5629b92b77d8d7f89996a22355eaf22b7"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.2.6/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.2.6/checksums.txt.asc",
+      "notes_md": "### Added\n\n- A plain shell now reports what runs in it. The session shows the command in the foreground and for how long (\"make for 3m\"), turns `working` while it runs and `idle` at the prompt, and carries the marker of the program inside it: `nv` for nvim and vim, `cc` for claude, `ux` for ulx and so on.\n- A command that runs 15 seconds or longer and then ends marks the shell `finished` and sends a notification (\"make finished in 42s\") when nobody is attached. Quick commands, editors, pagers and `ssh` never notify.\n- A command that stops on a question (`[y/N]`, a password, \"Enter a name:\") turns the shell `blocked` with the question, and notifies. ult only tells you; it never types an answer into a plain shell.\n- A coding agent started by hand in a shell (claude, ulx, codex ...) gets the same status engine and permission-prompt reading as an agent session.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.2.6\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.2.6-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-linux-arm64.tar.gz) | `93270491e130fcf5…` |\n| Linux x64 | [`ult-v0.2.6-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-linux-x64.tar.gz) | `91648464f31f88a2…` |\n| macOS arm64 | [`ult-v0.2.6-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-macos-arm64.tar.gz) | `2c9661689956adc0…` |\n| macOS x64 | [`ult-v0.2.6-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.2.6/ult-v0.2.6-macos-x64.tar.gz) | `7296f6e306f4b469…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.2.5...v0.2.6\n"
+    },
     {
       "version": "0.2.5",
       "tag": "v0.2.5",

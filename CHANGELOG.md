@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.3.2] - 2026-11-10
+
+### Fixed
+
+- A terminal's answer to an image-support probe (the kitty graphics protocol, `ESC _ G … ESC \`, sent by programs such as `claude`) was typed into the shell as text like `Gi=31;OK`. These answers are now matched with their probes like other terminal replies, and probes in replayed scrollback are dropped.
+
 ## [0.3.1] - 2026-11-10
 
 ### Changed

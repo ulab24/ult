@@ -2,10 +2,67 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T12:12:21Z",
-  "latest": "v0.3.0",
+  "generated": "2026-11-10T12:40:03Z",
+  "latest": "v0.3.1",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.3.1",
+      "tag": "v0.3.1",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "A file dropped on a shell is saved in the folder the shell is in and the status bar says so (`saved name in folder/`), but its path is no longer typed at the prompt. Agent sessions still get the temporary file's path typed in."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "Dropping a file on a local `claude` (or other agent) session did nothing when the session had been running for a while: the program turns bracketed paste on once, at its start, and a terminal that attached later never saw it, so the dropped path arrived as typed text. The daemon now follows that mode and switches it back on when a client attaches."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.3.1",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.3.0...v0.3.1",
+      "assets": [
+        {
+          "name": "ult-v0.3.1-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-linux-arm64.tar.gz",
+          "sha256": "01d3b2af904e8348d33a30e165f682b0f16f7be9acad02da6492050fcc0c3cdf"
+        },
+        {
+          "name": "ult-v0.3.1-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-linux-x64.tar.gz",
+          "sha256": "7cfaedb01c25b769634d23df26ae143b193c375f72fa2adfb6a0a86d4a2b69ff"
+        },
+        {
+          "name": "ult-v0.3.1-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-macos-arm64.tar.gz",
+          "sha256": "26078aac9b5c211d0f818a12376a66b159087b5a81f7f0efa2844217b99c7493"
+        },
+        {
+          "name": "ult-v0.3.1-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-macos-x64.tar.gz",
+          "sha256": "1da419a43a0cfb89319049a981219146f75e3249d07e656191b19fb4ce504101"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.3.1/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.3.1/checksums.txt.asc",
+      "notes_md": "### Changed\n\n- A file dropped on a shell is saved in the folder the shell is in and the status bar says so (`saved name in folder/`), but its path is no longer typed at the prompt. Agent sessions still get the temporary file's path typed in.\n\n### Fixed\n\n- Dropping a file on a local `claude` (or other agent) session did nothing when the session had been running for a while: the program turns bracketed paste on once, at its start, and a terminal that attached later never saw it, so the dropped path arrived as typed text. The daemon now follows that mode and switches it back on when a client attaches.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.3.1\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.3.1-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-linux-arm64.tar.gz) | `01d3b2af904e8348…` |\n| Linux x64 | [`ult-v0.3.1-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-linux-x64.tar.gz) | `7cfaedb01c25b769…` |\n| macOS arm64 | [`ult-v0.3.1-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-macos-arm64.tar.gz) | `26078aac9b5c211d…` |\n| macOS x64 | [`ult-v0.3.1-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.1/ult-v0.3.1-macos-x64.tar.gz) | `1da419a43a0cfb89…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.3.0...v0.3.1\n"
+    },
     {
       "version": "0.3.0",
       "tag": "v0.3.0",

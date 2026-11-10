@@ -2,10 +2,69 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T11:15:07Z",
-  "latest": "v0.2.8",
+  "generated": "2026-11-10T12:12:21Z",
+  "latest": "v0.3.0",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.3.0",
+      "tag": "v0.3.0",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "Drop a file on the terminal while attached to a session on another machine and ult sends it there. The terminal types the dropped file's path; ult sees a paste that is nothing but paths of local files, uploads each one to the session's machine and types the path it has there instead. A session running claude, ulx, opencode, codex or another agent (also one you started by hand in a shell) gets the file in a private temporary folder, `uploads/\u003csession id\u003e/` in ultd's data folder, cleared after 3 days. A shell gets the file in the folder the shell is in right now, and the path is typed; an editor, server or other program gets the file in its folder and nothing is typed. The status bar shows the progress and the result.",
+            "`drop = off` in the config turns it off. Files that look like credentials (`.ssh`, `.gnupg`, `.aws`, `.kube`, `id_rsa`-style keys, `.pem`, `.p12`, `.kdbx` and a few more) are never sent. Sessions on the machine you are on are left alone, since the path already works there.",
+            "New `upload` operation in the protocol (1.2): chunked, up to 100 MiB per file, only from a client attached read-write to the session, never overwriting, with names reduced to letters, digits and `. _ - + @ ,`. An older `ultd` answers \"update ultd on that machine to send files\"."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "`ult stop` no longer reports \"connection lost during stop\" when the daemon closed the connection because it was told to stop."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.3.0",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.2.8...v0.3.0",
+      "assets": [
+        {
+          "name": "ult-v0.3.0-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-linux-arm64.tar.gz",
+          "sha256": "acffff75f6cc55205b954e9fe2e26c7af343437253bd8281ffccfd0e81c3fcf3"
+        },
+        {
+          "name": "ult-v0.3.0-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-linux-x64.tar.gz",
+          "sha256": "d37e9cbfb785f5b144e27fc629865e0e6066db4e850e7fd3d8c6e883e3fc2824"
+        },
+        {
+          "name": "ult-v0.3.0-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-macos-arm64.tar.gz",
+          "sha256": "ded2630344522ac10cbf256e086d6989b0646b6be6a82a3836b5bf3eae0de949"
+        },
+        {
+          "name": "ult-v0.3.0-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-macos-x64.tar.gz",
+          "sha256": "617c0b86641529fba335475d28776a0a3c537c93500d550937f5709e836ec42d"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.3.0/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.3.0/checksums.txt.asc",
+      "notes_md": "### Added\n\n- Drop a file on the terminal while attached to a session on another machine and ult sends it there. The terminal types the dropped file's path; ult sees a paste that is nothing but paths of local files, uploads each one to the session's machine and types the path it has there instead. A session running claude, ulx, opencode, codex or another agent (also one you started by hand in a shell) gets the file in a private temporary folder, `uploads/\u003csession id\u003e/` in ultd's data folder, cleared after 3 days. A shell gets the file in the folder the shell is in right now, and the path is typed; an editor, server or other program gets the file in its folder and nothing is typed. The status bar shows the progress and the result.\n- `drop = off` in the config turns it off. Files that look like credentials (`.ssh`, `.gnupg`, `.aws`, `.kube`, `id_rsa`-style keys, `.pem`, `.p12`, `.kdbx` and a few more) are never sent. Sessions on the machine you are on are left alone, since the path already works there.\n- New `upload` operation in the protocol (1.2): chunked, up to 100 MiB per file, only from a client attached read-write to the session, never overwriting, with names reduced to letters, digits and `. _ - + @ ,`. An older `ultd` answers \"update ultd on that machine to send files\".\n\n### Fixed\n\n- `ult stop` no longer reports \"connection lost during stop\" when the daemon closed the connection because it was told to stop.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.3.0\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.3.0-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-linux-arm64.tar.gz) | `acffff75f6cc5520…` |\n| Linux x64 | [`ult-v0.3.0-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-linux-x64.tar.gz) | `d37e9cbfb785f5b1…` |\n| macOS arm64 | [`ult-v0.3.0-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-macos-arm64.tar.gz) | `ded2630344522ac1…` |\n| macOS x64 | [`ult-v0.3.0-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.0/ult-v0.3.0-macos-x64.tar.gz) | `617c0b86641529fb…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.2.8...v0.3.0\n"
+    },
     {
       "version": "0.2.8",
       "tag": "v0.2.8",

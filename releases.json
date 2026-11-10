@@ -2,10 +2,74 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T13:08:28Z",
-  "latest": "v0.3.3",
+  "generated": "2026-11-10T15:26:01Z",
+  "latest": "v0.3.4",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.3.4",
+      "tag": "v0.3.4",
+      "date": "2026-11-10",
+      "prerelease": false,
+      "sections": [
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "`ULT_DEBUG_DROP=/path/file ult` logs what looks like a paste coming from the terminal and what ult does with it, to find out why a dropped file did not arrive. Off by default; it logs pasted text, never single keystrokes."
+          ]
+        },
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "An attached session now has a rule (a thin line) between the program and the status bar, so a program's own status line no longer sits flush against the bar. The program gets two rows less than the terminal."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "The status bar sometimes disappeared until the next redraw (up to a second) when a program cleared or reset the screen, for example `nvim` and `claude` on start, exit or resize. The bar and rule are now painted again right after output that erases or resets the screen, including a sequence split across two reads."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.3.4",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.3.3...v0.3.4",
+      "assets": [
+        {
+          "name": "ult-v0.3.4-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-linux-arm64.tar.gz",
+          "sha256": "62e2506bb8ddec0a7e5d2e071b07b6b90da8d154b1dcef9ba4caaa64c787d81f"
+        },
+        {
+          "name": "ult-v0.3.4-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-linux-x64.tar.gz",
+          "sha256": "c011083183510bdd4de577993c5a58b975fe45012763a29914330dfd1c816261"
+        },
+        {
+          "name": "ult-v0.3.4-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-macos-arm64.tar.gz",
+          "sha256": "6f89d4251f4cf714463e9dc9ce36e3563e5d4a87b36847e0981277d0be02538a"
+        },
+        {
+          "name": "ult-v0.3.4-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-macos-x64.tar.gz",
+          "sha256": "d8e0379307d0987d62577c20e44d7829aad519b4b201c7ce0f88e3a3fd193475"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.3.4/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.3.4/checksums.txt.asc",
+      "notes_md": "### Added\n\n- `ULT_DEBUG_DROP=/path/file ult` logs what looks like a paste coming from the terminal and what ult does with it, to find out why a dropped file did not arrive. Off by default; it logs pasted text, never single keystrokes.\n\n### Changed\n\n- An attached session now has a rule (a thin line) between the program and the status bar, so a program's own status line no longer sits flush against the bar. The program gets two rows less than the terminal.\n\n### Fixed\n\n- The status bar sometimes disappeared until the next redraw (up to a second) when a program cleared or reset the screen, for example `nvim` and `claude` on start, exit or resize. The bar and rule are now painted again right after output that erases or resets the screen, including a sequence split across two reads.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.3.4\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.3.4-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-linux-arm64.tar.gz) | `62e2506bb8ddec0a…` |\n| Linux x64 | [`ult-v0.3.4-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-linux-x64.tar.gz) | `c011083183510bdd…` |\n| macOS arm64 | [`ult-v0.3.4-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-macos-arm64.tar.gz) | `6f89d4251f4cf714…` |\n| macOS x64 | [`ult-v0.3.4-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.3.4/ult-v0.3.4-macos-x64.tar.gz) | `d8e0379307d0987d…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.3.3...v0.3.4\n"
+    },
     {
       "version": "0.3.3",
       "tag": "v0.3.3",

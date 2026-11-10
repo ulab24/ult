@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.2.7] - 2026-11-10
+
+### Fixed
+
+- A session whose program is not on the daemon's PATH (`program "claude" not found in PATH`) now starts. A daemon started by a service, `ssh -c` or a remote login has a bare PATH, so agents installed in `~/.local/bin` or under nvm were not found. When a program is missing, ult asks the user's login shell for its PATH (once a minute at most, 5 second limit) and starts the program with it. A program found on the daemon's own PATH never triggers this.
+
 ## [0.2.6] - 2026-11-10
 
 ### Added

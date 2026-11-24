@@ -2,10 +2,98 @@
   "schema": 1,
   "product": "ult",
   "repo": "ulab24/ult",
-  "generated": "2026-11-10T15:26:01Z",
-  "latest": "v0.3.4",
+  "generated": "2026-11-24T19:51:45Z",
+  "latest": "v0.4.0",
   "signing_key_fingerprint": "09F881428CD9EA8B8471384B9E17F9109A9978C1",
   "releases": [
+    {
+      "version": "0.4.0",
+      "tag": "v0.4.0",
+      "date": "2026-11-25",
+      "prerelease": false,
+      "summary": "Coming back to a session now shows the program's exact screen, the status bar can no longer be drawn over or trap the cursor, and `^B r` redraws on demand. Update ult on every machine: the new reattach needs the new version on both ends.",
+      "sections": [
+        {
+          "name": "Security",
+          "key": "security",
+          "items": [
+            "The filter that stops a program from writing your clipboard (OSC 52) could be bypassed with an escape sequence started inside another one, or with a stray escape character left in front of plain text. Both are closed."
+          ]
+        },
+        {
+          "name": "Added",
+          "key": "added",
+          "items": [
+            "The daemon now speaks protocol 1.3, which lets a client ask for the session's screen when it attaches; older clients and older daemons keep working with each other.",
+            "`^B r` while attached redraws the screen from the daemon's copy of it and asks the program to draw itself again; in split panes it repaints every pane from what ult already holds.",
+            "Split panes now open a session on its exact screen too, like the attach view, and `ult bridge` passes a GUI's request for that screen on to the daemon."
+          ]
+        },
+        {
+          "name": "Changed",
+          "key": "changed",
+          "items": [
+            "Reattaching to a session now shows the program's exact screen and modes (alternate screen, bracketed paste, mouse, cursor, keyboard protocol), rebuilt from a copy of the screen the daemon keeps for every session, however long the program has run; only sessions recovered from an earlier daemon, until you resume them, still get the older replay.",
+            "`ult attach` now replaces the visible text of your terminal with the session's screen, like tmux does.",
+            "A session's size is now limited to 1000 columns by 500 rows, and attaching at a different size resizes the session first; attaching from a narrower terminal shows the session's screen cut to that width, and attaching from a wider one later shows the lines still on the screen whole again.",
+            "Attaching to a session now writes to your terminal through one careful writer, so the status bar and the program's output can no longer get in each other's way.",
+            "An attached session's escape sequence with more than 32 parameters is now dropped, in the TUI and with `ult attach`, because ult's own screen model does not act on it either; the terminal and ult then agree on what the program drew."
+          ]
+        },
+        {
+          "name": "Fixed",
+          "key": "fixed",
+          "items": [
+            "A reattach could show a blank file tree or a half-drawn screen in nvim and similar programs, because the old replay was only the last 256 KiB of output.",
+            "The kitty keyboard protocol and modifyOtherKeys now survive a reattach, so a program that turned them on long ago (Claude Code does, for Shift+Enter) gets the same keys after you attach again, in the attach view and with `ult attach`.",
+            "The replay for older clients no longer starts in the middle of an escape sequence or a character.",
+            "The screen after quitting an editor was wrong when the terminal size had changed since the editor started.",
+            "Stray text such as `[60;266H` and an input cursor sitting on the status bar could appear after attaching, because the bar was painted in the middle of the program's output. This can no longer happen.",
+            "The status bar and the program's area now stay on the last rows after the program clears the screen, resets the terminal, switches to or from the alternate screen, or you resize the window.",
+            "The shell prompt now appears after an agent such as Claude Code exits, without having to run `clear`.",
+            "A program that repeats a character (the `REP` sequence, which ncurses can use) right after the status bar was painted now repeats its own character, not the bar's.",
+            "Split panes and the attach view no longer act on escape sequences they do not know that look like known ones with an extra marker, for example a graphics query (`CSI ? 1;1 S`) that was taken as a scroll, or a marker in the wrong place (`CSI 3 ? J`).",
+            "In split panes and ult's copy of the screen, a wide character (for example a CJK letter) that wrapped at the end of a line over half of another wide character could leave the other half behind.",
+            "In split panes, \"cursor to the next line\" and \"to the previous line\" (`CSI n E`, `CSI n F`) now stop at the program's scroll region, as other cursor moves and real terminals do."
+          ]
+        }
+      ],
+      "url": "https://github.com/ulab24/ult/releases/tag/v0.4.0",
+      "compare_url": "https://github.com/ulab24/ult/compare/v0.3.4...v0.4.0",
+      "assets": [
+        {
+          "name": "ult-v0.4.0-linux-arm64.tar.gz",
+          "os": "linux",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-linux-arm64.tar.gz",
+          "sha256": "8fa69347f1f1d1c5ca80ae646cae0d57268dbca8dc99c5c26001ac1f05f6095f"
+        },
+        {
+          "name": "ult-v0.4.0-linux-x64.tar.gz",
+          "os": "linux",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-linux-x64.tar.gz",
+          "sha256": "5a3e971bd0fad2d323b9f57952c786b5d7b304f2c1b9a4f80ae987d4e8d2e6af"
+        },
+        {
+          "name": "ult-v0.4.0-macos-arm64.tar.gz",
+          "os": "macos",
+          "arch": "arm64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-macos-arm64.tar.gz",
+          "sha256": "67b9c74ffcf8fde31ba05c497eec21cb14deacf626a4864a61a13ac736bbe1cc"
+        },
+        {
+          "name": "ult-v0.4.0-macos-x64.tar.gz",
+          "os": "macos",
+          "arch": "x64",
+          "url": "https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-macos-x64.tar.gz",
+          "sha256": "d3e9ad4ad20f9aae49775121a39c6757172cebca1d3aab1668c9cab03e357d81"
+        }
+      ],
+      "checksums_url": "https://github.com/ulab24/ult/releases/download/v0.4.0/checksums.txt",
+      "signature_url": "https://github.com/ulab24/ult/releases/download/v0.4.0/checksums.txt.asc",
+      "notes_md": "Coming back to a session now shows the program's exact screen, the status bar can no longer be drawn over or trap the cursor, and `^B r` redraws on demand. Update ult on every machine: the new reattach needs the new version on both ends.\n\n### Security\n\n- The filter that stops a program from writing your clipboard (OSC 52) could be bypassed with an escape sequence started inside another one, or with a stray escape character left in front of plain text. Both are closed.\n\n### Added\n\n- The daemon now speaks protocol 1.3, which lets a client ask for the session's screen when it attaches; older clients and older daemons keep working with each other.\n- `^B r` while attached redraws the screen from the daemon's copy of it and asks the program to draw itself again; in split panes it repaints every pane from what ult already holds.\n- Split panes now open a session on its exact screen too, like the attach view, and `ult bridge` passes a GUI's request for that screen on to the daemon.\n\n### Changed\n\n- Reattaching to a session now shows the program's exact screen and modes (alternate screen, bracketed paste, mouse, cursor, keyboard protocol), rebuilt from a copy of the screen the daemon keeps for every session, however long the program has run; only sessions recovered from an earlier daemon, until you resume them, still get the older replay.\n- `ult attach` now replaces the visible text of your terminal with the session's screen, like tmux does.\n- A session's size is now limited to 1000 columns by 500 rows, and attaching at a different size resizes the session first; attaching from a narrower terminal shows the session's screen cut to that width, and attaching from a wider one later shows the lines still on the screen whole again.\n- Attaching to a session now writes to your terminal through one careful writer, so the status bar and the program's output can no longer get in each other's way.\n- An attached session's escape sequence with more than 32 parameters is now dropped, in the TUI and with `ult attach`, because ult's own screen model does not act on it either; the terminal and ult then agree on what the program drew.\n\n### Fixed\n\n- A reattach could show a blank file tree or a half-drawn screen in nvim and similar programs, because the old replay was only the last 256 KiB of output.\n- The kitty keyboard protocol and modifyOtherKeys now survive a reattach, so a program that turned them on long ago (Claude Code does, for Shift+Enter) gets the same keys after you attach again, in the attach view and with `ult attach`.\n- The replay for older clients no longer starts in the middle of an escape sequence or a character.\n- The screen after quitting an editor was wrong when the terminal size had changed since the editor started.\n- Stray text such as `[60;266H` and an input cursor sitting on the status bar could appear after attaching, because the bar was painted in the middle of the program's output. This can no longer happen.\n- The status bar and the program's area now stay on the last rows after the program clears the screen, resets the terminal, switches to or from the alternate screen, or you resize the window.\n- The shell prompt now appears after an agent such as Claude Code exits, without having to run `clear`.\n- A program that repeats a character (the `REP` sequence, which ncurses can use) right after the status bar was painted now repeats its own character, not the bar's.\n- Split panes and the attach view no longer act on escape sequences they do not know that look like known ones with an extra marker, for example a graphics query (`CSI ? 1;1 S`) that was taken as a scroll, or a marker in the wrong place (`CSI 3 ? J`).\n- In split panes and ult's copy of the screen, a wide character (for example a CJK letter) that wrapped at the end of a line over half of another wide character could leave the other half behind.\n- In split panes, \"cursor to the next line\" and \"to the previous line\" (`CSI n E`, `CSI n F`) now stop at the program's scroll region, as other cursor moves and real terminals do.\n\n---\n\n### Install or upgrade\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/ulab24/ult/main/install.sh | bash -s -- --version=v0.4.0\n```\n\nRun it again to upgrade. Linux and macOS, x64 and arm64. Update every machine you connect to with ult, so they run the same version.\n\n### Downloads\n\n| Platform | Archive | SHA-256 |\n|---|---|---|\n| Linux arm64 | [`ult-v0.4.0-linux-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-linux-arm64.tar.gz) | `8fa69347f1f1d1c5…` |\n| Linux x64 | [`ult-v0.4.0-linux-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-linux-x64.tar.gz) | `5a3e971bd0fad2d3…` |\n| macOS arm64 | [`ult-v0.4.0-macos-arm64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-macos-arm64.tar.gz) | `67b9c74ffcf8fde3…` |\n| macOS x64 | [`ult-v0.4.0-macos-x64.tar.gz`](https://github.com/ulab24/ult/releases/download/v0.4.0/ult-v0.4.0-macos-x64.tar.gz) | `d3e9ad4ad20f9aae…` |\n\n`checksums.txt` lists the full hashes and is signed (`checksums.txt.asc`) with the ulab24 release key, fingerprint `09F8 8142 8CD9 EA8B 8471 384B 9E17 F910 9A99 78C1`. The installer checks the signature and the hash before it installs anything.\n\n**Full changelog**: https://github.com/ulab24/ult/compare/v0.3.4...v0.4.0\n"
+    },
     {
       "version": "0.3.4",
       "tag": "v0.3.4",

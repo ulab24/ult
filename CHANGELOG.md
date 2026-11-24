@@ -2,6 +2,42 @@
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-25
+
+Coming back to a session now shows the program's exact screen, the status bar can no longer be drawn over or trap the cursor, and `^B r` redraws on demand. Update ult on every machine: the new reattach needs the new version on both ends.
+
+### Added
+
+- The daemon now speaks protocol 1.3, which lets a client ask for the session's screen when it attaches; older clients and older daemons keep working with each other.
+- `^B r` while attached redraws the screen from the daemon's copy of it and asks the program to draw itself again; in split panes it repaints every pane from what ult already holds.
+- Split panes now open a session on its exact screen too, like the attach view, and `ult bridge` passes a GUI's request for that screen on to the daemon.
+
+### Changed
+
+- Reattaching to a session now shows the program's exact screen and modes (alternate screen, bracketed paste, mouse, cursor, keyboard protocol), rebuilt from a copy of the screen the daemon keeps for every session, however long the program has run; only sessions recovered from an earlier daemon, until you resume them, still get the older replay.
+- `ult attach` now replaces the visible text of your terminal with the session's screen, like tmux does.
+- A session's size is now limited to 1000 columns by 500 rows, and attaching at a different size resizes the session first; attaching from a narrower terminal shows the session's screen cut to that width, and attaching from a wider one later shows the lines still on the screen whole again.
+- Attaching to a session now writes to your terminal through one careful writer, so the status bar and the program's output can no longer get in each other's way.
+- An attached session's escape sequence with more than 32 parameters is now dropped, in the TUI and with `ult attach`, because ult's own screen model does not act on it either; the terminal and ult then agree on what the program drew.
+
+### Fixed
+
+- A reattach could show a blank file tree or a half-drawn screen in nvim and similar programs, because the old replay was only the last 256 KiB of output.
+- The kitty keyboard protocol and modifyOtherKeys now survive a reattach, so a program that turned them on long ago (Claude Code does, for Shift+Enter) gets the same keys after you attach again, in the attach view and with `ult attach`.
+- The replay for older clients no longer starts in the middle of an escape sequence or a character.
+- The screen after quitting an editor was wrong when the terminal size had changed since the editor started.
+- Stray text such as `[60;266H` and an input cursor sitting on the status bar could appear after attaching, because the bar was painted in the middle of the program's output. This can no longer happen.
+- The status bar and the program's area now stay on the last rows after the program clears the screen, resets the terminal, switches to or from the alternate screen, or you resize the window.
+- The shell prompt now appears after an agent such as Claude Code exits, without having to run `clear`.
+- A program that repeats a character (the `REP` sequence, which ncurses can use) right after the status bar was painted now repeats its own character, not the bar's.
+- Split panes and the attach view no longer act on escape sequences they do not know that look like known ones with an extra marker, for example a graphics query (`CSI ? 1;1 S`) that was taken as a scroll, or a marker in the wrong place (`CSI 3 ? J`).
+- In split panes and ult's copy of the screen, a wide character (for example a CJK letter) that wrapped at the end of a line over half of another wide character could leave the other half behind.
+- In split panes, "cursor to the next line" and "to the previous line" (`CSI n E`, `CSI n F`) now stop at the program's scroll region, as other cursor moves and real terminals do.
+
+### Security
+
+- The filter that stops a program from writing your clipboard (OSC 52) could be bypassed with an escape sequence started inside another one, or with a stray escape character left in front of plain text. Both are closed.
+
 ## [0.3.4] - 2026-11-10
 
 ### Changed
